@@ -1,12 +1,61 @@
 .GaleriaSection {
   min-height: 100vh;
   background-color: var(--bg-color);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.GaleriaHeader {
+  padding-top: 20px;
+  display: flex;
+}
+
+.GaleriaHeader-h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.GaleriaHeader-div {
+  display: flex;
+  flex: 1;
+}
+
+.GaleriaHeader-div--derecha {
+  justify-content: end;
+}
+.GaleriaContent {
+  display: flex;
+  gap: 10%;
+  align-items: stretch;
+  height: 60vh;
+}
+.GaleriaIzq,
+.GaleriaGrid {
+  flex: 1;
+  height: 100%;
+}
+
+.GaleriaIzq {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.GaleriaIzq-img {
+  width: 100%;
+  flex: 1;
+  max-height: 70%;
+  object-fit: cover;
 }
 
 .GaleriaGrid {
-  width: min(40vw, 1100px);
-  aspect-ratio: 3 / 2;
-
+  position: relative;
+  flex: 1;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -15,6 +64,16 @@
   grid-template-areas:
     "img1 img2 img3 "
     "img4 img5 img6";
+}
+
+.GaleriaGrid::before {
+  content: "";
+  position: absolute;
+  top: -32px; /* separación respecto al grid */
+  left: 0;
+  width: 100%;
+  height: 0.8px;
+  background-color: var(--text-color);
 }
 
 .Galeria-imgDiv:nth-child(1) {
@@ -38,7 +97,6 @@
 
 .Galeria-imgDiv {
   width: 100%;
-  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 
@@ -46,4 +104,22 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.GaleriaContent-textoDiv {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 1rem;
+}
+
+.GaleriaContent-texto {
+  color: var(--text-color);
+}
+
+.Galeria-titulo {
+  font-size: 8rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--main-color);
+  line-height: 0.9;
 }
