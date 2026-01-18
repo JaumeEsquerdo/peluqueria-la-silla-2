@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router";
 import Home from "@/pages/Home";
 import ErrorPage from "@/pages/ErrorPage";
 import Reservas from "../../pages/Reservas";
+import { Galeria } from "../../components/Galeria/Galeria";
 
 // importe de páginas especiales
 import Layout from "@/Layout";
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/reservas",
         element: <Reservas />,
+      },
+      {
+        path: "/galeria",
+        element: <Galeria />,
       },
       {
         path: "*",
