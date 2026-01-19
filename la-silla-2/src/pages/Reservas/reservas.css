@@ -1,0 +1,82 @@
+.ReservasPage {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.SubHeader {
+  padding: 20px 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.SubHeader-icon {
+  font-size: 3rem;
+  color: var(--sec-color);
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+}
+.SubHeader-title {
+  font-size: 4.375rem;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--sec-color);
+}
+
+.SubHeader-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.SubHeader-link {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* content */
+.Reservas-content {
+  flex: 1;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.Reservas-h2 {
+  position: fixed;
+  top: 42%;
+  left: -13%;
+  width: fit-content;
+  transform: rotate(-90deg);
+  font-size: 8rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--main-color);
+}
+
+.Reservas-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+  padding-right: 14%;
+}
+
+.Reservas-titleStep {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.Reservas-titleLine {
+  width: 100%;
+  display: inline-block;
+  height: 1px;
+  border-bottom: 1px solid var(--text-color);
+}
+
+/* reservas paso 1 */
