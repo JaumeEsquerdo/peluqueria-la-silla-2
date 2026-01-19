@@ -1,4 +1,7 @@
 import "./reservas.css";
+import { useState } from "react";
+import { Calendar } from "../../components/Calendar/Calendar";
+import { TimeSlots } from "../../components/TimeSlots/TimeSlots";
 
 const servicios = [
   { servicio: "CORTE FADE", tiempo: "30 MIN", precio: "20€" },
@@ -11,9 +14,12 @@ const servicios = [
   { servicio: "DECOLORACIÓN", tiempo: "40 MIN", precio: "40€" },
   { servicio: "CORTE CON MECHAS", tiempo: "25 MIN", precio: "25€" },
   { servicio: "CORTE + TRATAMIENTO", tiempo: "35 MIN", precio: "45€" },
+  { servicio: "OTRO", tiempo: "CUENTANOS TU IDEA" },
 ];
 
 const Reservas = () => {
+  const [selectedDate, setSelectedDate] = useState();
+  const [selectedTime, setSelectedTime] = useState();
   return (
     <div className="ReservasPage">
       <header className="SubHeader">
@@ -39,17 +45,33 @@ const Reservas = () => {
       <section className="Reservas-content">
         <h2 className="Reservas-h2">RESERVA ONLINE</h2>
         <div className="Reservas-steps">
+          {/* paso 1 */}
           <div className="Reservas-select">
             <h3 className="Reservas-titleStep">1. SELECCIONA EL SERVICIO</h3>
             <span className="Reservas-titleLine"></span>
             <div className="Seleccion-grid">
-              {servicios.map((serv, i) => {
+              {servicios.map((serv, i) => (
                 <div className="Servicio-div" key={i}>
-                  <h4>{serv.servicio}</h4>
-                  <p>{serv.tiempo}</p>
-                  <p>{serv.precio}</p>
-                </div>;
-              })}
+                  <h4 className="Servicio-title">{serv.servicio}</h4>
+                  <p className="Servicio-tiempo">{serv.tiempo}</p>
+                  <p className="Servicio-precio">{serv.precio}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* paso 2 */}
+          <div className="Reservas-time">
+            <h3 className="Reservas-titleStep">2. FECHA Y HORA</h3>
+            <span className="Reservas-titleLine"></span>
+            <div>
+              <Calendar
+                selectedDate={selectedDate}
+                setSelectedDate={setSelectedDate}
+              />
+              <TimeSlots
+                selectedTime={selectedTime}
+                setSelectedTime={setSelectedTime}
+              />
             </div>
           </div>
         </div>

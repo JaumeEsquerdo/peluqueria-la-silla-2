@@ -80,3 +80,47 @@
 }
 
 /* reservas paso 1 */
+
+.Seleccion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.Servicio-div {
+  cursor: pointer;
+  background-color: white;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  min-height: 140px;
+  transition:
+    box-shadow 0.4s ease-in-out,
+    background-color 0.08s ease-in-out;
+}
+
+.Servicio-div:hover {
+  box-shadow: 0 4px 12px #24257f34;
+}
+
+.Servicio-div:active {
+  background-color: #ededfe;
+}
+
+.Servicio-title {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+.Servicio-tiempo {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a69d9d;
+}
+.Servicio-precio {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--main-color);
+}
