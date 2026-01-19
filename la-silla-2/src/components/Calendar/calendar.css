@@ -1,3 +1,4 @@
+/* css del calendar de react-pick-day */
 .rdp-caption_label {
   text-transform: uppercase;
 }
@@ -5,4 +6,49 @@
 .rdp {
   font-family: inherit;
   font-size: 0.875rem;
+  --rdp-accent-color: var(--main-color);
+  --rdp-background-color: white;
+  --rdp-outline: none;
+}
+
+.rdp-months {
+  background-color: white;
+  padding: 2px 12px;
+}
+
+.Reservas-contentCalendar {
+  padding-top: 20px;
+}
+
+.rdp-caption_label {
+  color: var(--text-color);
+}
+
+.rdp-selected .rdp-day_button {
+  color: var(--text-color);
+}
+
+.rdp-chevron {
+  display: inline-block;
+  fill: var(--main-color);
+}
+
+.rdp-today:not(.rdp-outside) {
+  color: var(--main-color);
+}
+
+.rdp-root {
+  --rdp-accent-color: var(--main-color);
+}
+
+.rdp-selected {
+  font-weight: 600;
+  font-size: large;
+}
+
+.rdp-day_button {
+  transition: color 0.1s ease-in-out;
+}
+.rdp-day_button:hover {
+  color: var(--sec-color);
 }

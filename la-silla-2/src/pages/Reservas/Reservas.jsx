@@ -1,7 +1,7 @@
-import "./reservas.css";
 import { useState } from "react";
 import { Calendar } from "../../components/Calendar/Calendar";
 import { TimeSlots } from "../../components/TimeSlots/TimeSlots";
+import "./reservas.css";
 
 const servicios = [
   { servicio: "CORTE FADE", tiempo: "30 MIN", precio: "20€" },
@@ -63,7 +63,7 @@ const Reservas = () => {
           <div className="Reservas-time">
             <h3 className="Reservas-titleStep">2. FECHA Y HORA</h3>
             <span className="Reservas-titleLine"></span>
-            <div>
+            <div className="Reservas-contentCalendar">
               <Calendar
                 selectedDate={selectedDate}
                 setSelectedDate={setSelectedDate}
@@ -73,6 +73,11 @@ const Reservas = () => {
                 setSelectedTime={setSelectedTime}
               />
             </div>
+          </div>
+          {/* paso 2 */}
+          <div className="Reservas-time">
+            <h3 className="Reservas-titleStep">3. TUS DATOS</h3>
+            <span className="Reservas-titleLine"></span>
           </div>
         </div>
       </section>

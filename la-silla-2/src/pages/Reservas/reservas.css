@@ -98,12 +98,13 @@
   gap: 6px;
   min-height: 140px;
   transition:
-    box-shadow 0.4s ease-in-out,
+    box-shadow 0.08s ease-in-out,
     background-color 0.08s ease-in-out;
 }
 
 .Servicio-div:hover {
   box-shadow: 0 4px 12px #24257f34;
+  background-color: #e1e1fa;
 }
 
 .Servicio-div:active {
@@ -111,16 +112,27 @@
 }
 
 .Servicio-title {
+  pointer-events: none;
   font-size: 1.25rem;
   font-weight: 400;
 }
 .Servicio-tiempo {
+  pointer-events: none;
+
   font-size: 1rem;
   font-weight: 400;
   color: #a69d9d;
 }
 .Servicio-precio {
+  pointer-events: none;
   font-size: 1.25rem;
   font-weight: 400;
   color: var(--main-color);
+}
+
+/* paso 2 fecha y hora */
+
+.Reservas-contentCalendar {
+  display: flex;
+  gap: 80px;
 }

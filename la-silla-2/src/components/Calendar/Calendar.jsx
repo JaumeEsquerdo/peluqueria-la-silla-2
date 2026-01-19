@@ -3,7 +3,7 @@ import "react-day-picker/dist/style.css";
 import { es } from "date-fns/locale";
 import "./calendar.css";
 
-export const Calendar = (selected, setSelected) => {
+export const Calendar = ({ selected, setSelected }) => {
   return (
     <DayPicker
       mode="single"
