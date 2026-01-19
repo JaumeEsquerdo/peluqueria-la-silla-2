@@ -13,7 +13,11 @@
 
 .rdp-months {
   background-color: white;
-  padding: 2px 12px;
+  padding: 0 12px;
+}
+
+.rdp-day {
+  width: 84px;
 }
 
 .Reservas-contentCalendar {
@@ -39,6 +43,7 @@
 
 .rdp-root {
   --rdp-accent-color: var(--main-color);
+  --rdp-day_button-border-radius: none;
 }
 
 .rdp-selected {
@@ -47,8 +52,12 @@
 }
 
 .rdp-day_button {
-  transition: color 0.1s ease-in-out;
+  transition: color 0s ease-in-out;
 }
 .rdp-day_button:hover {
   color: var(--sec-color);
+}
+
+.rdp-day_selected {
+  border-radius: none;
 }
