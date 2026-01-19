@@ -2,17 +2,16 @@ import { useGallerySwap } from "../../hooks/useGallerySwap";
 import "./galeria.css";
 
 const images = [
-  "/imgs/img-peluqueria.jpg",
-  "/imgs/img-peluqueria.jpg",
-  "/imgs/img-peluqueria.jpg",
-  "/imgs/img-peluqueria.jpg",
-  "/imgs/img-peluqueria.jpg",
-  "/imgs/img-peluqueria.jpg",
-  "/imgs/img-peluqueria.jpg",
-  "/imgs/img-peluqueria.jpg",
-  "/imgs/img-peluqueria.jpg",
-  "/imgs/img-peluqueria.jpg",
-  "/imgs/img-peluqueria.jpg",
+  "/imgs/corte-1.png",
+  "/imgs/corte-2.png",
+  "/imgs/corte-3.png",
+  "/imgs/corte-4.png",
+  "/imgs/corte-5.png",
+  "/imgs/corte-6.png",
+  "/imgs/corte-7.png",
+  "/imgs/corte-8.png",
+  "/imgs/corte-9.png",
+  "/imgs/corte-10.png",
 ];
 export const Galeria = () => {
   const visibleImages = useGallerySwap(images, 3500, 2);
@@ -38,11 +37,7 @@ export const Galeria = () => {
 
         <div className="GaleriaContent">
           <div className="GaleriaIzq">
-            <img
-              src="/imgs/img-peluqueria.jpg"
-              alt=""
-              className="GaleriaIzq-img"
-            />
+            <img src="/imgs/pelu-1.png" alt="" className="GaleriaIzq-img" />
             <div className="GaleriaContent-textoDiv">
               <p className="GaleriaContent-texto">
                 EN LA SILLA 2 CUIDAMOS CADA CORTE COMO PARTE DE TU IDENTIDAD.

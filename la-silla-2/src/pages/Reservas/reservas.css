@@ -7,7 +7,7 @@
 }
 
 .SubHeader {
-  padding: 20px 40px;
+  padding: 60px 40px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -85,7 +85,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
-  padding-top: 20px;
+  padding-top: 60px;
 }
 
 .Servicio-div {
@@ -135,4 +135,46 @@
 .Reservas-contentCalendar {
   display: flex;
   gap: 80px;
+}
+
+/* paso 3 datos */
+
+.Reservas-data {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 60px;
+}
+
+.Reservas-rowForm {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10%;
+}
+
+.Reservas-label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 1.25rem;
+}
+
+.Reservas-input {
+  font-size: 1rem;
+  background: none;
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid #a69d9d;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.Reservas-input:focus {
+  border-bottom: 1.4px solid #333;
+}
+
+.Reservas-input:focus-visible {
+  outline: none;
+  border-bottom-color: #333;
 }

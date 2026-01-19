@@ -74,9 +74,55 @@ const Reservas = () => {
               />
             </div>
           </div>
-          {/* paso 2 */}
+          {/* paso 3 */}
           <div className="Reservas-time">
             <h3 className="Reservas-titleStep">3. TUS DATOS</h3>
+            <span className="Reservas-titleLine"></span>
+          </div>
+          <form className="Reservas-data">
+            <div className="Reservas-rowForm">
+              <label className="Reservas-label">
+                NOMBRE DE LA RESERVA
+                <input
+                  required
+                  className="Reservas-input"
+                  type="text"
+                  placeholder="NOMBRE"
+                />
+              </label>
+              <label className="Reservas-label">
+                TELÉFONO
+                <input
+                  required
+                  className="Reservas-input"
+                  type="text"
+                  placeholder="(+34)"
+                />
+              </label>
+            </div>
+            <div className="Reservas-rowForm">
+              <label className="Reservas-label">
+                EMAIL DE CONFIRMACIÓN
+                <input
+                  required
+                  className="Reservas-input"
+                  type="text"
+                  placeholder="EMAIL@GMAIL.COM"
+                />
+              </label>
+              <label className="Reservas-label">
+                NOTAS ADICIONALES (OPCIONAL)
+                <input
+                  className="Reservas-input"
+                  type="text"
+                  placeholder="..."
+                />
+              </label>
+            </div>
+          </form>
+          {/* paso 4 resumen reserva */}
+          <div>
+            <h3 className="Reservas-titleStep">4. RESUMEN DE LA CITA</h3>
             <span className="Reservas-titleLine"></span>
           </div>
         </div>
