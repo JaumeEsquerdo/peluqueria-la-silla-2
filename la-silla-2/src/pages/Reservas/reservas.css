@@ -42,6 +42,11 @@
   font-size: 1.5rem;
   text-decoration: none;
   color: var(--text-color);
+  transition: color 0.06s ease-in-out;
+}
+
+.SubHeader-link:hover {
+  color: var(--main-color);
 }
 
 /* content */
