@@ -1,5 +1,7 @@
 import { useGallerySwap } from "../../hooks/useGallerySwap";
 import "./galeria.css";
+// eslint-disable-next-line no-unused-vars
+import { AnimatePresence, motion } from "framer-motion";
 
 const images = [
   "/imgs/corte-1.png",
@@ -14,7 +16,12 @@ const images = [
   "/imgs/corte-10.png",
 ];
 export const Galeria = () => {
-  const visibleImages = useGallerySwap(images, 3500, 2);
+  const visibleImages = useGallerySwap(images, 4000, 2);
+
+  const imgVariants = {
+    animate: { transition: { duration: 0.8, ease: "easeOut" } },
+    exit: { transition: { duration: 0.8, ease: "easeIn" } },
+  };
   return (
     <div
       style={{
@@ -54,11 +61,25 @@ export const Galeria = () => {
           </div>
 
           <div className="GaleriaGrid">
-            {visibleImages.map((src, i) => (
-              <div key={i} className="Galeria-imgDiv">
-                <img src={src} alt="" className="Galeria-img" />
-              </div>
-            ))}
+            {/* layout hace que Framer Motion anime la posición y tamaño automáticamente cuando el grid cambia */}
+            <AnimatePresence>
+              {visibleImages.map((src) => (
+                <motion.div
+                  key={src}
+                  variants={imgVariants}
+                  animate="animate"
+                  exit="exit"
+                  layout
+                  className="Galeria-imgDiv"
+                >
+                  <img
+                    src={src}
+                    alt="imágenes de la peluquería"
+                    className="Galeria-img"
+                  />
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </div>
         </div>
         <h2 className="Galeria-titulo">GALERÍA</h2>
