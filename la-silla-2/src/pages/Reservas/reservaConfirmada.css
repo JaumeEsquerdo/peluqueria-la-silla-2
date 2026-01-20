@@ -1,0 +1,69 @@
+.ReservaConfirmada-line {
+  height: 1px;
+  width: 100%;
+  background-color: var(--text-color);
+  /* margin-right: 14%; */
+}
+
+.Reservas-content {
+  display: flex;
+  flex-direction: column;
+  /* padding-right: 14%; */
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Reservas-contentConfirmada {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Circulo {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  background-color: var(--main-color);
+}
+
+.Circulo img {
+  width: 66px;
+  height: 66px;
+}
+
+.ReservasContentText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.ReservasContentText-h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.ReservasContentText {
+  color: #a69d9d;
+}
+
+.Reservas-link {
+  text-decoration: none;
+}
+
+.Reservas-dataDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 12px;
+}

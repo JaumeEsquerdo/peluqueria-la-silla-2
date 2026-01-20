@@ -29,11 +29,12 @@ const Reservas = () => {
     reserva.servicio &&
     reserva.fecha &&
     reserva.hora &&
-    reserva.nombre &&
-    reserva.telefono &&
-    reserva.email &&
+    reserva.nombre.trim() !== "" &&
+    reserva.telefono.trim() !== "" &&
+    reserva.email.trim() !== "" &&
     (reserva.servicio?.servicio !== "OTRO" ||
       (reserva.notas && reserva.notas.trim() !== ""));
+
   const bookConfirmada = () => {
     if (reserva.servicio && reserva.fecha && reserva.hora) {
       navigate("/reservas/confirmada");
@@ -74,7 +75,10 @@ const Reservas = () => {
                 <div
                   className={`Servicio-div ${reserva.servicio?.servicio === serv.servicio ? "Servicio-selected" : ""}`}
                   key={i}
-                  onClick={() => updateReserva({ servicio: serv })}
+                  onClick={() => {
+                    updateReserva({ servicio: serv });
+                    console.log("Servicio seleccionado:", serv);
+                  }}
                 >
                   <h4 className="Servicio-title">{serv.servicio}</h4>
                   <p className="Servicio-tiempo">{serv.tiempo}</p>
@@ -113,7 +117,13 @@ const Reservas = () => {
             <h3 className="Reservas-titleStep">3. TUS DATOS</h3>
             <span className="Reservas-titleLine"></span>
           </div>
-          <form className="Reservas-data">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              bookConfirmada();
+            }}
+            className="Reservas-data"
+          >
             <div className="Reservas-rowForm">
               <label className="Reservas-label">
                 NOMBRE DE LA RESERVA
@@ -146,7 +156,7 @@ const Reservas = () => {
                 <input
                   required
                   className="Reservas-input"
-                  type="text"
+                  type="email"
                   placeholder="EMAIL@GMAIL.COM"
                   value={reserva.email}
                   onChange={(e) => updateReserva({ email: e.target.value })}
@@ -167,29 +177,59 @@ const Reservas = () => {
                   }
                   value={reserva.notas}
                   onChange={(e) => updateReserva({ notas: e.target.value })}
-                  required={reserva.servicio?.servicio === "OTRO"} // ✅ requerido solo si es OTRO
+                  required={reserva.servicio?.servicio === "OTRO"} // solo obligatorio si es OTRO
                 />
               </label>
             </div>
-          </form>
-          {/* paso 4 resumen reserva */}
-          <div className="Reservas-resumen">
-            <h3 className="Reservas-titleStep">4. RESUMEN DE LA CITA</h3>
-            <span className="Reservas-titleLine"></span>
-            <div className="Reservas-resumenContent">
-              <div className="Reservas-resumenCorte">
-                <p>Servicio: {reserva.servicio?.servicio}</p>
-                <p>Duración:{reserva.servicio?.tiempo}</p>
-                <p>Precio:{reserva.servicio?.precio}</p>
+            {/* paso 4 resumen reserva */}
+            <div className="Reservas-resumen">
+              <h3 className="Reservas-titleStep">4. RESUMEN DE LA CITA</h3>
+              <span className="Reservas-titleLine"></span>
+              <div className="Reservas-resumenDiv">
+                <div className="Reservas-resumenContent">
+                  {reserva.servicio && reserva.fecha && reserva.hora ? (
+                    <>
+                      <div className="Reservas-resumenCorte">
+                        <p className="Servicio-title Reservas-dataCitaImportant">
+                          {" "}
+                          {reserva.servicio.servicio}
+                        </p>
+                        <p className="Servicio-tiempo">
+                          {reserva.servicio.tiempo}
+                        </p>
+                        <p className="Servicio-precio">
+                          {reserva.servicio.precio}
+                        </p>
+                      </div>
+                      <p className="Reservas-dataCitaImportant">
+                        FECHA:{" "}
+                        <span className="Reservas-spanTime">
+                          {reserva.fecha.split("-").reverse().join("-")}
+                        </span>
+                      </p>
+                      <p className="Reservas-dataCitaImportant">
+                        HORA:{" "}
+                        <span className="Reservas-spanTime">
+                          {reserva.hora}
+                        </span>
+                      </p>
+                    </>
+                  ) : (
+                    <p className="Reservas-esperando">
+                      ESPERANDO COMPLETAR LA CITA...
+                    </p>
+                  )}
+                </div>
+                <button
+                  type="submit"
+                  className={`Reservas-button ${isValid ? "" : "Reservas-buttonDisabled"}`}
+                  disabled={!isValid}
+                >
+                  CONFIRMAR CITA
+                </button>
               </div>
-              <p>Fecha: {reserva.fecha?.split("-").reverse().join("-")}</p>
-
-              <p>Hora: {reserva.hora}</p>
             </div>
-            <button disabled={!isValid} onClick={bookConfirmada}>
-              CONFIRMAR CITA
-            </button>
-          </div>
+          </form>
         </div>
       </section>
     </div>
