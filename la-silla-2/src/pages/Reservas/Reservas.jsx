@@ -43,7 +43,7 @@ const Reservas = () => {
 
   return (
     <div className="ReservasPage">
-      <header className="SubHeader">
+      {/* <header className="SubHeader">
         <a className="SubHeader-icon" href="/">
           (2)
         </a>
@@ -61,7 +61,7 @@ const Reservas = () => {
             PRECIOS
           </a>
         </ul>
-      </header>
+      </header> */}
 
       <section className="Reservas-content">
         <h2 className="Reservas-h2">RESERVA ONLINE</h2>

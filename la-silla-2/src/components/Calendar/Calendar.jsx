@@ -8,6 +8,7 @@ export const Calendar = ({ selectedDate, setSelectedDate }) => {
   return (
     <DayPicker
       mode="single"
+      timeZone="Europe/Madrid"
       selected={selectedDate}
       onSelect={(date) => setSelectedDate(date)}
       locale={es}

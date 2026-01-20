@@ -1,0 +1,32 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #24257f;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.Footer-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Footer-logo {
+  width: 80px;
+  padding-bottom: 30px;
+}
+
+.Footer-link {
+  text-decoration: none;
+  color: #f2f3f5;
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+
+.Footer-link:hover {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.Footer-text {
+  color: #f2f3f5;
+}

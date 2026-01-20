@@ -1,0 +1,50 @@
+/*--------------------------------
+CSS HEADER GENERAL
+--------------------------------*/
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #f2f3f5;
+  padding: 0px 0px 20px 0px;
+}
+
+/* CSS HEADER LOGOTIPO */
+.Header-logoImage {
+  width: 150px;
+  padding: 30px 40px;
+}
+
+/* CSS HEADER NAVEGACIÓN */
+.Header-nav {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px;
+}
+
+.Header-navList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  text-decoration: none;
+}
+.Header-li {
+  padding: 8px 20px 8px 20px;
+}
+
+.Header-navLink {
+  color: #333333;
+  text-decoration: none;
+}
+
+.Header-navLink img {
+  width: 25px;
+}
+
+.Header-navLink:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}

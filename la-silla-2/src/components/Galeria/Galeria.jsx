@@ -15,7 +15,7 @@ const images = [
   "/imgs/corte-9.png",
   "/imgs/corte-10.png",
 ];
-export const Galeria = () => {
+export const Galeria = ({ id }) => {
   const visibleImages = useGallerySwap(images, 4000, 2);
 
   const imgVariants = {
@@ -24,6 +24,7 @@ export const Galeria = () => {
   };
   return (
     <div
+      id={id}
       style={{
         width: "100%",
         backgroundColor: "var(--bg-color)",
