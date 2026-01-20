@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Calendar } from "../../components/Calendar/Calendar";
 import { TimeSlots } from "../../components/TimeSlots/TimeSlots";
 import "./reservas.css";
+import { useReserva } from "../../hooks/useReserva";
+import { useNavigate } from "react-router";
 
 const servicios = [
   { servicio: "CORTE FADE", tiempo: "30 MIN", precio: "20€" },
@@ -20,6 +22,23 @@ const servicios = [
 const Reservas = () => {
   const [selectedDate, setSelectedDate] = useState();
   const [selectedTime, setSelectedTime] = useState();
+  const { updateReserva, reserva } = useReserva();
+  const navigate = useNavigate();
+
+  const isValid =
+    reserva.servicio &&
+    reserva.fecha &&
+    reserva.hora &&
+    reserva.nombre &&
+    reserva.telefono &&
+    reserva.email;
+
+  const bookConfirmada = () => {
+    if (reserva.servicio && reserva.fecha && reserva.hora) {
+      navigate("/reservas/confirmada");
+    }
+  };
+
   return (
     <div className="ReservasPage">
       <header className="SubHeader">
@@ -51,7 +70,11 @@ const Reservas = () => {
             <span className="Reservas-titleLine"></span>
             <div className="Seleccion-grid">
               {servicios.map((serv, i) => (
-                <div className="Servicio-div" key={i}>
+                <div
+                  className="Servicio-div"
+                  key={i}
+                  onClick={() => updateReserva({ servicio: serv })}
+                >
                   <h4 className="Servicio-title">{serv.servicio}</h4>
                   <p className="Servicio-tiempo">{serv.tiempo}</p>
                   <p className="Servicio-precio">{serv.precio}</p>
@@ -66,11 +89,17 @@ const Reservas = () => {
             <div className="Reservas-contentCalendar">
               <Calendar
                 selectedDate={selectedDate}
-                setSelectedDate={setSelectedDate}
+                setSelectedDate={(date) => {
+                  setSelectedDate(date);
+                  updateReserva({ fecha: date.toISOString().split("T")[0] });
+                }}
               />
               <TimeSlots
                 selectedTime={selectedTime}
-                setSelectedTime={setSelectedTime}
+                setSelectedTime={(time) => {
+                  setSelectedTime(time);
+                  updateReserva({ hora: time });
+                }}
               />
             </div>
           </div>
@@ -88,6 +117,8 @@ const Reservas = () => {
                   className="Reservas-input"
                   type="text"
                   placeholder="NOMBRE"
+                  value={reserva.nombre}
+                  onChange={(e) => updateReserva({ nombre: e.target.value })}
                 />
               </label>
               <label className="Reservas-label">
@@ -97,6 +128,8 @@ const Reservas = () => {
                   className="Reservas-input"
                   type="text"
                   placeholder="(+34)"
+                  value={reserva.telefono}
+                  onChange={(e) => updateReserva({ telefono: e.target.value })}
                 />
               </label>
             </div>
@@ -108,6 +141,8 @@ const Reservas = () => {
                   className="Reservas-input"
                   type="text"
                   placeholder="EMAIL@GMAIL.COM"
+                  value={reserva.email}
+                  onChange={(e) => updateReserva({ email: e.target.value })}
                 />
               </label>
               <label className="Reservas-label">
@@ -116,14 +151,29 @@ const Reservas = () => {
                   className="Reservas-input"
                   type="text"
                   placeholder="..."
+                  value={reserva.notas}
+                  onChange={(e) => updateReserva({ notas: e.target.value })}
                 />
               </label>
             </div>
           </form>
           {/* paso 4 resumen reserva */}
-          <div>
+          <div className="Reservas-resumen">
             <h3 className="Reservas-titleStep">4. RESUMEN DE LA CITA</h3>
             <span className="Reservas-titleLine"></span>
+            <div className="Reservas-resumenContent">
+              <div className="Reservas-resumenCorte">
+                <p>Servicio: {reserva.servicio?.servicio}</p>
+                <p>Duración:{reserva.servicio?.tiempo}</p>
+                <p>Precio:{reserva.servicio?.precio}</p>
+              </div>
+              <p>Fecha: {reserva.fecha?.split("-").reverse().join("-")}</p>
+
+              <p>Hora: {reserva.hora}</p>
+            </div>
+            <button disabled={!isValid} onClick={bookConfirmada}>
+              CONFIRMAR CITA
+            </button>
           </div>
         </div>
       </section>

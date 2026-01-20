@@ -3,9 +3,9 @@ import { createBrowserRouter } from "react-router";
 // importe de páginas
 import Home from "@/pages/Home";
 import ErrorPage from "@/pages/ErrorPage";
-import Reservas from "../../pages/reservas/Reservas";
+import Reservas from "../../pages/Reservas/Reservas";
 import { Galeria } from "../../components/Galeria/Galeria";
-
+import Confirmada from "../../pages/Reservas/Confirmada";
 // importe de páginas especiales
 import Layout from "@/Layout";
 // import PrivateRoute from '@/components/PrivateRoute'
@@ -23,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/reservas",
         element: <Reservas />,
+      },
+      {
+        path: "/reservas/confirmada",
+        element: <Confirmada />,
       },
       {
         path: "/galeria",

@@ -1,8 +1,6 @@
 import "./timeSlots.css";
-import { useState } from "react";
 
-export const TimeSlots = () => {
-  const [hourSelected, setHourSelected] = useState(null);
+export const TimeSlots = ({ selectedTime, setSelectedTime }) => {
   // Crear un array con las horas de 9 a 21
   const startHour = 9;
   const endHour = 21;
@@ -16,8 +14,8 @@ export const TimeSlots = () => {
       {hours.map((hour) => (
         <div
           key={hour}
-          className={`TimeSlot ${hourSelected ? "TimeSlot-selected" : ""}`}
-          onClick={(hour) => setHourSelected(hour)}
+          className={`TimeSlot ${selectedTime === hour ? "TimeSlot-selected" : ""}`}
+          onClick={() => setSelectedTime(hour)}
         >
           {hour}
         </div>
