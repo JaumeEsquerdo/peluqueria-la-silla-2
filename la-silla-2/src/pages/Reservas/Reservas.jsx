@@ -4,7 +4,7 @@ import { TimeSlots } from "../../components/TimeSlots/TimeSlots";
 import "./reservas.css";
 import { useReserva } from "../../hooks/useReserva";
 import { useNavigate } from "react-router";
-
+import { Header } from "../../components/Header/Header";
 const servicios = [
   { servicio: "CORTE FADE", tiempo: "30 MIN", precio: "20€" },
   { servicio: "CORTE CLÁSICO", tiempo: "25 MIN", precio: "18€" },
@@ -62,7 +62,7 @@ const Reservas = () => {
           </a>
         </ul>
       </header> */}
-
+      <Header />
       <section className="Reservas-content">
         <h2 className="Reservas-h2">RESERVA ONLINE</h2>
         <div className="Reservas-steps">
