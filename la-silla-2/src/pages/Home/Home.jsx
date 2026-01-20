@@ -1,34 +1,38 @@
 import { Galeria } from "../../components/Galeria/Galeria";
+import { Header } from "../../components//Header/Header.jsx";
 import "./Home.css";
 
 const Home = () => {
   return (
     <main className="Home-body">
       {/* INICIO APARTADO HERO */}
-      <section className="Home-section-photo">
-        <img
-          className="Home-img"
-          src="/imgs/cabecera.png"
-          alt="La [2] Silla"
-          title="La [2] Silla"
-        />
-      </section>
-      <section className="Home-section-text">
-        <p className="Home-text">
-          AV DE LA HUERTA, 4<br />[ 46120 ]
-        </p>
-        <a
-          href="/Reservas"
-          target="_blank"
-          title="Reserva tu cita"
-          className="Home-link"
-        >
-          RESERVA TU CITA
-        </a>
-        <p className="Home-text">
-          PORT SAPLAYA
-          <br />[ VALENCIA ]
-        </p>
+      <section className="Home-hero">
+        <Header />
+        <div className="Home-section-photo">
+          <img
+            className="Home-img"
+            src="/imgs/cabecera.png"
+            alt="La [2] Silla"
+            title="La [2] Silla"
+          />
+        </div>
+        <section className="Home-section-text">
+          <p className="Home-text">
+            AV DE LA HUERTA, 4<br />[ 46120 ]
+          </p>
+          <a
+            href="/Reservas"
+            target="_blank"
+            title="Reserva tu cita"
+            className="Home-link"
+          >
+            RESERVA TU CITA
+          </a>
+          <p className="Home-text">
+            PORT SAPLAYA
+            <br />[ VALENCIA ]
+          </p>
+        </section>
       </section>
       {/* FINAL APARTADO HERO */}
 
@@ -37,11 +41,11 @@ const Home = () => {
       {/* FINAL APARTADO GALERÍA */}
 
       {/* INICIO SOBRE NOSOTROS */}
-      <section class="Nosotros-body" id="nosotros">
-        <div class="Nosotros-title">SOBRE NOSOTROS</div>
+      <section className="Nosotros-body" id="nosotros">
+        <div className="Nosotros-title">SOBRE NOSOTROS</div>
 
-        <div class="Nosotros-content">
-          <div class="Nosotros-text">
+        <div className="Nosotros-content">
+          <div className="Nosotros-text">
             <p>SOMOS UN EQUIPO APASIONADO POR EL ARTE DEL CABELLO.</p>
             <p>
               Nos gusta el olor a navaja recién afilada, el sonido de las
@@ -55,7 +59,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div class="Nosotros-image Nosotros-imgTop">
+          <div className="Nosotros-image Nosotros-imgTop">
             <img
               src="imgs/img-right.png"
               alt="Imagen Barbería"
@@ -63,7 +67,7 @@ const Home = () => {
             />
           </div>
 
-          <div class="Nosotros-image Nosotros-imgBottom">
+          <div className="Nosotros-image Nosotros-imgBottom">
             <img
               src="imgs/img-left.png"
               alt="Imagen Peluquería"
@@ -71,7 +75,7 @@ const Home = () => {
             />
           </div>
 
-          <div class="Nosotros-text">
+          <div className="Nosotros-text">
             <p>
               Combinamos técnica, estilo y creatividad para encontrar lo que
               realmente encaja contigo, entender tu personalidad y tu actitud.
@@ -91,51 +95,51 @@ const Home = () => {
       {/* FINAL SOBRE NOSOTROS */}
 
       {/* INICIO APARTADO PRECIOS */}
-      <section class="Prices-body" id="precios">
-        <h2 class="Prices-title">PRECIOS Y SERVICIOS</h2>
+      <section className="Prices-body" id="precios">
+        <h2 className="Prices-title">PRECIOS Y SERVICIOS</h2>
 
-        <div class="Prices-grid">
+        <div className="Prices-grid">
           {/* <!-- Texto de la izquierda --> */}
-          <div class="Prices-column">
+          <div className="Prices-column">
             <h3>CORTES</h3>
-            <div class="Price-item">
+            <div className="Price-item">
               <span>CORTE FADE</span>
               <span>20€</span>
             </div>
-            <div class="Price-item">
+            <div className="Price-item">
               <span>CORTE CLÁSICO</span>
               <span>18€</span>
             </div>
-            <div class="Price-item">
+            <div className="Price-item">
               <span>CORTE CABALLERO</span>
               <span>20€</span>
             </div>
-            <div class="Price-item">
+            <div className="Price-item">
               <span>CORTE NIÑO</span>
               <span>12€</span>
             </div>
 
             <h3>BARBA</h3>
-            <div class="Price-item">
+            <div className="Price-item">
               <span>RECORTE DE BARBA</span>
               <span>10€</span>
             </div>
-            <div class="Price-item">
+            <div className="Price-item">
               <span>AFEITADO CLÁSICO</span>
               <span>12€</span>
             </div>
-            <div class="Price-item">
+            <div className="Price-item">
               <span>BARBA + CORTE</span>
               <span>25€</span>
             </div>
-            <div class="Price-item">
+            <div className="Price-item">
               <span>MANTENIMIENTO</span>
               <span>10€</span>
             </div>
           </div>
 
           {/* <!-- Imagen --> */}
-          <div class="Prices-image">
+          <div className="Prices-image">
             <img
               src="/imgs/img-center.png"
               alt="Imagen barbería y peluquería"
@@ -144,22 +148,26 @@ const Home = () => {
           </div>
 
           {/* <!-- Texto de la derecha--> */}
-          <div class="Prices-column">
+          <div className="Prices-column">
             <h3>CORTES AVANZADOS</h3>
-            <div class="Price-item">
+            <div className="Price-item">
               <span>DECOLORACIÓN</span>
               <span>40€</span>
             </div>
-            <div class="Price-item">
+            <div className="Price-item">
               <span>CORTE CON MECHAS</span>
               <span>25€</span>
             </div>
-            <div class="Price-item">
+            <div className="Price-item">
               <span>CORTE + TRATAMIENTO</span>
               <span>45€</span>
             </div>
             {/* <!-- Botón de reservas --> */}
-            <a href="/reservas" class="Prices-button" title="Reserva tu cita">
+            <a
+              href="/reservas"
+              className="Prices-button"
+              title="Reserva tu cita"
+            >
               RESERVA TU CITA
             </a>
           </div>

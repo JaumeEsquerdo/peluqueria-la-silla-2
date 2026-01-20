@@ -23,17 +23,8 @@ export const Galeria = ({ id }) => {
     exit: { transition: { duration: 0.8, ease: "easeIn" } },
   };
   return (
-    <div
-      id={id}
-      style={{
-        width: "100%",
-        backgroundColor: "var(--bg-color)",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
-      <div className="GaleriaSection">
+    <div id={id} className="GaleriaSection">
+      <div className="GaleriaSection-content">
         <header className="GaleriaHeader">
           <div className="GaleriaHeader-div">
             <h3 className="GaleriaHeader-h3">NUESTROS CORTES</h3>
