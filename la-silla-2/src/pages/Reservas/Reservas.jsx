@@ -31,8 +31,9 @@ const Reservas = () => {
     reserva.hora &&
     reserva.nombre &&
     reserva.telefono &&
-    reserva.email;
-
+    reserva.email &&
+    (reserva.servicio?.servicio !== "OTRO" ||
+      (reserva.notas && reserva.notas.trim() !== ""));
   const bookConfirmada = () => {
     if (reserva.servicio && reserva.fecha && reserva.hora) {
       navigate("/reservas/confirmada");
@@ -71,13 +72,17 @@ const Reservas = () => {
             <div className="Seleccion-grid">
               {servicios.map((serv, i) => (
                 <div
-                  className="Servicio-div"
+                  className={`Servicio-div ${reserva.servicio?.servicio === serv.servicio ? "Servicio-selected" : ""}`}
                   key={i}
                   onClick={() => updateReserva({ servicio: serv })}
                 >
                   <h4 className="Servicio-title">{serv.servicio}</h4>
                   <p className="Servicio-tiempo">{serv.tiempo}</p>
-                  <p className="Servicio-precio">{serv.precio}</p>
+                  <p
+                    className={`Servicio-precio ${reserva.servicio?.servicio === serv.servicio ? "Servicio-precioSelected" : ""}`}
+                  >
+                    {serv.precio}
+                  </p>
                 </div>
               ))}
             </div>
@@ -130,6 +135,8 @@ const Reservas = () => {
                   placeholder="(+34)"
                   value={reserva.telefono}
                   onChange={(e) => updateReserva({ telefono: e.target.value })}
+                  maxLength={9}
+                  minLength={9}
                 />
               </label>
             </div>
@@ -146,13 +153,21 @@ const Reservas = () => {
                 />
               </label>
               <label className="Reservas-label">
-                NOTAS ADICIONALES (OPCIONAL)
+                NOTAS ADICIONALES{" "}
+                {reserva.servicio?.servicio === "OTRO"
+                  ? "(REQUERIDO)"
+                  : "(OPCIONAL)"}
                 <input
                   className="Reservas-input"
                   type="text"
-                  placeholder="..."
+                  placeholder={
+                    reserva.servicio?.servicio === "OTRO"
+                      ? "CUÉNTANOS LO QUE QUIERES"
+                      : "..."
+                  }
                   value={reserva.notas}
                   onChange={(e) => updateReserva({ notas: e.target.value })}
+                  required={reserva.servicio?.servicio === "OTRO"} // ✅ requerido solo si es OTRO
                 />
               </label>
             </div>

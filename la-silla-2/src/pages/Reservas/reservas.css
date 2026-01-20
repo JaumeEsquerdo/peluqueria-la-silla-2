@@ -99,12 +99,18 @@
   min-height: 140px;
   transition:
     box-shadow 0.08s ease-in-out,
-    background-color 0.08s ease-in-out;
+    background-color 0.08s ease-in-out,
+    color 0.08s ease-in-out;
 }
 
-.Servicio-div:hover {
+.Servicio-div:not(.Servicio-selected):hover {
   box-shadow: 0 4px 12px #24257f34;
   background-color: #e1e1fa;
+}
+
+.Servicio-selected {
+  background-color: var(--main-color);
+  color: white;
 }
 
 .Servicio-div:active {
@@ -128,8 +134,11 @@
   font-size: 1.25rem;
   font-weight: 400;
   color: var(--main-color);
+  transition: color 0.08s ease-in-out;
 }
-
+.Servicio-precioSelected {
+  color: white;
+}
 /* paso 2 fecha y hora */
 
 .Reservas-contentCalendar {
