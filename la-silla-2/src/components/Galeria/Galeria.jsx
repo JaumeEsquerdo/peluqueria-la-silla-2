@@ -18,10 +18,6 @@ const images = [
 export const Galeria = ({ id }) => {
   const visibleImages = useGallerySwap(images, 4000, 2);
 
-  const imgVariants = {
-    animate: { transition: { duration: 0.8, ease: "easeOut" } },
-    exit: { transition: { duration: 0.8, ease: "easeIn" } },
-  };
   return (
     <div id={id} className="GaleriaSection">
       <div className="GaleriaSection-content">
@@ -58,10 +54,8 @@ export const Galeria = ({ id }) => {
               {visibleImages.map((src) => (
                 <motion.div
                   key={src}
-                  variants={imgVariants}
-                  animate="animate"
-                  exit="exit"
                   layout
+                  transition={{ duration: 1.2, ease: "easeOut" }}
                   className="Galeria-imgDiv"
                 >
                   <img

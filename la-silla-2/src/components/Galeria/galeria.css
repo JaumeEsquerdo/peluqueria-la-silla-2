@@ -126,8 +126,43 @@
 }
 
 .Galeria-titulo {
-  font-size: 8rem;
+  font-size: clamp(64px, 8vw, 120px);
   font-family: "Bebas Neue", sans-serif;
   color: var(--main-color);
   line-height: 0.9;
+}
+
+@media (max-width: 900px) {
+  .GaleriaSection-content {
+    padding-top: 40px;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding-bottom: 60px;
+  }
+  .GaleriaContent {
+    flex-direction: column;
+    height: auto;
+  }
+  .GaleriaIzq {
+    height: auto; /* que no ocupen todo el contenedor */
+  }
+  .GaleriaGrid {
+    overflow: hidden;
+    height: 400px;
+    max-height: 500px;
+    padding-top: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-auto-rows: 140px; /* o 160px según te guste */
+  }
+  .GaleriaHeader {
+    width: 100%;
+  }
+  .GaleriaHeader-div {
+    width: 100%;
+  }
+  .GaleriaHeader-h3 {
+    font-size: 1.2rem;
+  }
 }

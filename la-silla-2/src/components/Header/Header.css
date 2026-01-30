@@ -37,6 +37,7 @@ CSS HEADER GENERAL
 }
 
 .Header-navLink {
+  font-size: 1rem;
   cursor: pointer;
   border: none;
   color: #333333;
