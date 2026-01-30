@@ -1,3 +1,4 @@
+import { NavHeader } from "../NavHeader/NavHeader";
 import "./Header.css";
 import { useLocation, useNavigate } from "react-router";
 
@@ -34,34 +35,8 @@ export const Header = () => {
           />
         </a>
       </div>
-      <nav className="Header-nav">
-        <ul className="Header-navList">
-          <li className="Header-li">
-            <button
-              className="Header-navLink"
-              onClick={() => goToSection("galeria")}
-            >
-              GALERÍA
-            </button>
-          </li>
-          <li className="Header-li">
-            <button
-              className="Header-navLink"
-              onClick={() => goToSection("nosotros")}
-            >
-              NOSOTROS
-            </button>
-          </li>
-          <li className="Header-li">
-            <button
-              className="Header-navLink"
-              onClick={() => goToSection("precios")}
-            >
-              PRECIOS/RESERVAS
-            </button>
-          </li>
-        </ul>
-      </nav>
+
+      <NavHeader goToSection={goToSection} />
     </header>
   );
 };
