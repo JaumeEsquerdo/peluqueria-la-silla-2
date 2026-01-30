@@ -1,6 +1,7 @@
 import { Galeria } from "../../components/Galeria/Galeria";
 import { Header } from "../../components//Header/Header.jsx";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -20,14 +21,9 @@ const Home = () => {
           <p className="Home-text">
             AV DE LA HUERTA, 4<br />[ 46120 ]
           </p>
-          <a
-            href="/Reservas"
-            target="_blank"
-            title="Reserva tu cita"
-            className="Home-link"
-          >
+          <Link to="/Reservas" title="Reserva tu cita" className="Home-link">
             RESERVA TU CITA
-          </a>
+          </Link>
           <p className="Home-text">
             PORT SAPLAYA
             <br />[ VALENCIA ]
@@ -37,7 +33,7 @@ const Home = () => {
       {/* FINAL APARTADO HERO */}
 
       {/* INICIO APARTADO GALERÍA */}
-      <Galeria id={"galeria"} />
+      <Galeria id="galeria" />
       {/* FINAL APARTADO GALERÍA */}
 
       {/* INICIO SOBRE NOSOTROS */}

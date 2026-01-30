@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 
 // importe de páginas
 import Home from "@/pages/Home/Home.jsx";

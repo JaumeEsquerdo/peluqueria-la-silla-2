@@ -1,6 +1,26 @@
 import "./Header.css";
+import { useLocation, useNavigate } from "react-router";
 
 export const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const goToSection = async (id) => {
+    // si no estas en home, ves primero
+    if (location.pathname !== "/") {
+      // replace: false -> añade "/" al historial, así al volver atrás regresa a "/reservas".
+      // Si fuera true, reemplaza "/reservas" por "/" y el botón atrás no volvería a "/reservas".
+      navigate("/", { replace: false });
+      // esperar un nada a que renderice Home
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    } else {
+      // si ya está en Home navega sin setTimeout
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="Header">
       <div>
@@ -17,19 +37,28 @@ export const Header = () => {
       <nav className="Header-nav">
         <ul className="Header-navList">
           <li className="Header-li">
-            <a className="Header-navLink" href="#galeria">
+            <button
+              className="Header-navLink"
+              onClick={() => goToSection("galeria")}
+            >
               GALERÍA
-            </a>
+            </button>
           </li>
           <li className="Header-li">
-            <a className="Header-navLink" href="#nosotros">
+            <button
+              className="Header-navLink"
+              onClick={() => goToSection("nosotros")}
+            >
               NOSOTROS
-            </a>
+            </button>
           </li>
           <li className="Header-li">
-            <a className="Header-navLink" href="#precios">
+            <button
+              className="Header-navLink"
+              onClick={() => goToSection("precios")}
+            >
               PRECIOS/RESERVAS
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
