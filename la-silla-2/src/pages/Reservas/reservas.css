@@ -208,18 +208,28 @@
 }
 
 .Reservas-button {
-  padding: 12px 20px;
-  border: 2px solid var(--main-color);
-  font-size: 1.25rem;
-  color: var(--main-color);
-  font-weight: 400;
+  font-size: 1.05rem;
+  text-decoration: none;
+  border: 3px solid #24257f;
+  color: #24257f;
+  padding: 14px 28px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  white-space: nowrap;
   cursor: pointer;
-  height: fit-content;
+}
+
+.Reservas-button:hover:not(.Reservas-buttonDisabled) {
+  background-color: #24257f;
+  color: #f2f3f5;
+  transform: scale(1.05);
 }
 
 .Reservas-buttonDisabled {
   border: 2px solid #a69d9d;
   color: #a69d9d;
+  cursor: default;
 }
 
 .Reservas-resumenContent {
