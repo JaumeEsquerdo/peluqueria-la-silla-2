@@ -1,6 +1,7 @@
 import "./reservas.css";
 import "./reservaConfirmada.css";
 import { Link } from "react-router";
+import { Header } from "../../components/Header/Header";
 
 import { useReserva } from "../../hooks/useReserva";
 
@@ -11,7 +12,7 @@ const Confirmada = () => {
 
   return (
     <div className="ReservasPage">
-      <header className="SubHeader">
+      {/* <header className="SubHeader">
         <a className="SubHeader-icon" href="/">
           (2)
         </a>
@@ -29,7 +30,8 @@ const Confirmada = () => {
             PRECIOS
           </a>
         </ul>
-      </header>
+      </header> */}
+      <Header />
       <section className="Reservas-content">
         <h2 className="Reservas-h2">RESERVA ONLINE</h2>
         <span className="ReservaConfirmada-line"></span>

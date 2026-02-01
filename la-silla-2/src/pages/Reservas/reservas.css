@@ -50,6 +50,7 @@
 }
 
 /* content */
+
 .Reservas-content {
   flex: 1;
   width: 70%;
@@ -58,12 +59,12 @@
 }
 
 .Reservas-h2 {
-  position: fixed;
+  position: absolute;
   top: 42%;
   left: -13%;
   width: fit-content;
   transform: rotate(-90deg);
-  font-size: 8rem;
+  font-size: clamp(64px, 8vw, 120px);
   font-family: "Bebas Neue", sans-serif;
   color: var(--main-color);
 }
@@ -265,7 +266,7 @@
   color: #a69d9d;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .SubHeader {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -274,5 +275,18 @@
 
   .SubHeader-links {
     align-items: center;
+  }
+  .Reservas-h2 {
+    text-align: center;
+    left: auto;
+    position: relative;
+    width: 100%;
+    transform: rotate(0);
+    padding-bottom: 40px;
+  }
+
+  .Reservas-resumenContent {
+    min-width: auto;
+    width: 100%;
   }
 }
