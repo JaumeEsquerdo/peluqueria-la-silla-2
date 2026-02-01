@@ -6,9 +6,6 @@ export const useHandleScroll = ({ titleRef, containerRef }) => {
     const title = titleRef.current;
     const container = containerRef.current;
 
-    /* return si es mobile */
-    if (window.innerWidth < 900) return;
-
     if (!title || !container) return;
 
     const handleScroll = () => {
@@ -28,9 +25,32 @@ export const useHandleScroll = ({ titleRef, containerRef }) => {
       }
     };
 
+    const handleResize = () => {
+      if (window.innerWidth < 900) {
+        // Reset en mobile
+        title.style.position = "static";
+        title.style.top = "auto";
+
+        window.removeEventListener("scroll", handleScroll);
+      } else {
+        // Activar scroll en desktop
+        window.addEventListener("scroll", handleScroll);
+        handleScroll();
+      }
+    };
+
+    // Ejecutar al inicio
+    handleResize();
+
+    // Escuchar cambios de tamaño
+    window.addEventListener("resize", handleResize);
+
     window.addEventListener("scroll", handleScroll);
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, [titleRef, containerRef]);
 };
