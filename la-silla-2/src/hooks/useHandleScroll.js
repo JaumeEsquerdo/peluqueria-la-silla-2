@@ -45,9 +45,6 @@ export const useHandleScroll = ({ titleRef, containerRef }) => {
     // Escuchar cambios de tamaño
     window.addEventListener("resize", handleResize);
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
