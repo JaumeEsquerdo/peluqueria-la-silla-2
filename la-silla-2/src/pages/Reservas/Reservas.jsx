@@ -1,11 +1,10 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { Calendar } from "../../components/Calendar/Calendar";
 import { TimeSlots } from "../../components/TimeSlots/TimeSlots";
 import "./reservas.css";
 import { useReserva } from "../../hooks/useReserva";
 import { useNavigate } from "react-router";
 import { Header } from "../../components/Header/Header";
-import { useHandleScroll } from "../../hooks/useHandleScroll";
 
 const servicios = [
   { servicio: "CORTE FADE", tiempo: "30 MIN", precio: "20€" },
@@ -26,10 +25,6 @@ const Reservas = () => {
   const [selectedTime, setSelectedTime] = useState();
   const { updateReserva, reserva } = useReserva();
   const navigate = useNavigate();
-  const sectionRef = useRef();
-  const titleRef = useRef();
-
-  useHandleScroll({ titleRef, containerRef: sectionRef });
 
   const isValid =
     reserva.servicio &&
@@ -69,10 +64,11 @@ const Reservas = () => {
         </ul>
       </header> */}
       <Header />
-      <section ref={sectionRef} className="Reservas-content">
-        <h2 ref={titleRef} className="Reservas-h2">
-          RESERVA ONLINE
-        </h2>
+      <section className="Reservas-content">
+        <div className="Sticky-title">
+          <h2 className="Reservas-h2">RESERVA ONLINE</h2>
+        </div>
+
         <div className="Reservas-steps">
           {/* paso 1 */}
           <div className="Reservas-select">

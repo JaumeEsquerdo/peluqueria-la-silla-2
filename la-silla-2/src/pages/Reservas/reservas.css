@@ -55,18 +55,26 @@
   flex: 1;
   width: 70%;
   display: flex;
+
   justify-content: flex-start;
 }
 
+.Sticky-title {
+  position: relative;
+}
+
 .Reservas-h2 {
-  position: absolute;
+  position: sticky;
   top: 42%;
-  left: -13%;
+  transform: rotate(-90deg) translateX(-40%);
+  transform-origin: left top;
   width: fit-content;
-  transform: rotate(-90deg);
   font-size: clamp(64px, 8vw, 120px);
   font-family: "Bebas Neue", sans-serif;
   color: var(--main-color);
+
+  /* para que se vea "fuera" */
+  margin-left: -180px; /* lo empuja hacia fuera del section */
 }
 
 .Reservas-steps {
