@@ -33,9 +33,11 @@ const Confirmada = () => {
       </header> */}
       <Header />
       <section className="Reservas-content">
-        <h2 className="Reservas-h2">RESERVA ONLINE</h2>
-        <span className="ReservaConfirmada-line"></span>
+        <div className="Sticky-container">
+          <h2 className="Reservas-h2">RESERVA ONLINE</h2>
+        </div>
         <div className="Reservas-contentConfirmada">
+          <span className="ReservaConfirmada-line"></span>
           <span className="Circulo">
             {" "}
             <img src="/Checkmark.svg" alt="tick reserva confirmada" />
