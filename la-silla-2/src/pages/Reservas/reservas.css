@@ -51,6 +51,11 @@
 
 /* content */
 
+.Sticky-container {
+  position: relative;
+  width: auto;
+}
+
 .Reservas-content {
   flex: 1;
   width: 70%;
@@ -59,17 +64,13 @@
   justify-content: flex-start;
 }
 
-.Sticky-title {
-  position: relative;
-}
-
 .Reservas-h2 {
   position: sticky;
   top: 42%;
-  transform: rotate(-90deg) translateX(-40%);
-  transform-origin: left top;
-  width: fit-content;
-  font-size: clamp(64px, 8vw, 120px);
+  left: 0;
+  transform: rotate(-90deg);
+  width: max-content;
+  font-size: clamp(48px, 5.4vw, 96px);
   font-family: "Bebas Neue", sans-serif;
   color: var(--main-color);
 
@@ -274,6 +275,14 @@
   color: #a69d9d;
 }
 
+@media (max-width: 1280px) {
+  .Reservas-resumenDiv {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
 @media (max-width: 900px) {
   .SubHeader {
     grid-template-columns: 1fr;
@@ -291,15 +300,41 @@
     width: 100%;
     transform: rotate(0);
     padding-bottom: 40px;
+    margin: auto;
   }
 
   .Reservas-resumenContent {
     min-width: auto;
     width: 100%;
   }
-  .Reservas-resumenDiv {
-    align-items: center;
+
+  .Sticky-container {
+    width: 100%;
+  }
+  .Reservas-content {
     flex-direction: column;
-    gap: 20px;
+  }
+  .Reservas-label {
+    font-size: 1rem;
+    gap: 12px;
+  }
+  .Reservas-rowForm {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .Reservas-data {
+    gap: 40px;
+  }
+  .Reservas-esperando {
+    font-size: 1rem;
+  }
+  .Servicio-title {
+    font-size: 1rem;
+  }
+  .Servicio-tiempo {
+    font-size: 0.8rem;
+  }
+  .Servicio-precio {
+    font-size: 1rem;
   }
 }

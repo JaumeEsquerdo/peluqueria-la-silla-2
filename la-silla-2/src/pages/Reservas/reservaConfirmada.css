@@ -5,13 +5,13 @@
   /* margin-right: 14%; */
 }
 
-.Reservas-content {
+/* .Reservas-content {
   display: flex;
   flex-direction: column;
-  /* padding-right: 14%; */
+
   justify-content: flex-start;
   align-items: center;
-}
+} */
 
 .Reservas-contentConfirmada {
   padding: 60px 0;

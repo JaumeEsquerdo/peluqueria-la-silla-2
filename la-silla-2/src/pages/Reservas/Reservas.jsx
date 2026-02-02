@@ -64,11 +64,11 @@ const Reservas = () => {
         </ul>
       </header> */}
       <Header />
+
       <section className="Reservas-content">
-        <div className="Sticky-title">
+        <div className="Sticky-container">
           <h2 className="Reservas-h2">RESERVA ONLINE</h2>
         </div>
-
         <div className="Reservas-steps">
           {/* paso 1 */}
           <div className="Reservas-select">
