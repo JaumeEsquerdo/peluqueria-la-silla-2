@@ -53,7 +53,7 @@
 }
 
 .TimeSlot-blocked {
-  background-color: #777779;
+  background-color: #c4c4c4;
 }
 
 .TimeSlot-blocked:hover {
@@ -61,5 +61,5 @@
 }
 
 .TimeSlot-blocked:active {
-  background-color: #777779;
+  background-color: #c4c4c4;
 }

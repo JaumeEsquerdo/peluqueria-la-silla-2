@@ -6,6 +6,7 @@ export const TimeSlots = ({ selectedTime, setSelectedTime, selectedDate }) => {
   const startHour = 9;
   const endHour = 21;
 
+  //memorizar el array de horas abiertas
   const hours = useMemo(() => {
     const arr = [];
     for (let i = startHour; i <= endHour; i++) {
@@ -14,32 +15,33 @@ export const TimeSlots = ({ selectedTime, setSelectedTime, selectedDate }) => {
     return arr;
   }, []);
 
-  /* definir horas bloqueadas para simular UI de horas ya elegidas por otros usuarios e invalidas para los demás */
+  /* definir horas bloqueadas para simular UI de horas ya elegidas por otros usuarios e invalidas para los demás (según diá par o impar para cambiar) */
   const blockedHours = useMemo(() => {
     const blockedEvenDay = ["10:00", "13:00", "16:00", "19:00"];
     const blockedOddDay = ["9:00", "12:00", "15:00", "18:00", "21:00"];
 
     if (!selectedDate) return [];
 
-    const dayNumber = selectedDate.getDate();
+    const dayNumber = selectedDate.getDate(); // getDate devuelve solo el dia, de una fecha tipo 2-10-2025
     return dayNumber % 2 === 0 ? blockedEvenDay : blockedOddDay;
   }, [selectedDate]);
 
-  // si cambia fecha y la hora seleccionada queda bloqueada => reset
+  // aquí por si cambia de fecha, y la hora seleccionada ahora debería estar bloqueada => reset
   useEffect(() => {
+    // si no hay fecha seleccionada, quita la hora
     if (!selectedDate) {
       setSelectedTime(null);
       return;
     }
 
-    // Si la hora seleccionada ahora está bloqueada, reset
+    // Si la hora seleccionada ahora está en las horas bloqueadas del día seleccionado => reset
     // Si sigue libre, la mantenemos
     if (selectedTime && blockedHours.includes(selectedTime)) {
       setSelectedTime(null);
     }
-  }, [selectedDate, blockedHours, selectedTime, setSelectedTime]);
+  }, [selectedDate, blockedHours, selectedTime]);
 
-  //helper para saber si está bloqueado
+  //helper: para saber / se pone en true si esa hora está bloqueada
   const isBlocked = (hour) => blockedHours.includes(hour);
 
   return (
