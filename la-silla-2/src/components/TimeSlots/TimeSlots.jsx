@@ -60,7 +60,8 @@ export const TimeSlots = ({ selectedTime, setSelectedTime, selectedDate }) => {
             setSelectedTime(hour);
           }}
         >
-          {hour} {isBlocked(hour) && "   - Hora no disponible"}
+          <span>{hour}</span> <span>{isBlocked(hour) && "-"}</span>
+          <span>{isBlocked(hour) && "Hora no disponible"}</span>
         </div>
       ))}
     </div>
