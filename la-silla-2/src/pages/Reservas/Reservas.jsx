@@ -108,6 +108,7 @@ const Reservas = () => {
                 }}
               />
               <TimeSlots
+                selectedDate={selectedDate}
                 selectedTime={selectedTime}
                 setSelectedTime={(time) => {
                   setSelectedTime(time);

@@ -38,7 +38,7 @@
     color 0.08s ease-in-out;
 }
 
-.TimeSlot:not(.TimeSlot-selected):hover {
+.TimeSlot:hover:not(.TimeSlot-selected):not(.TimeSlot-blocked) {
   box-shadow: 0 4px 12px #24257f34;
   background-color: #e1e1fa;
 }
@@ -50,4 +50,16 @@
 .TimeSlot-selected {
   background-color: var(--main-color);
   color: white;
+}
+
+.TimeSlot-blocked {
+  background-color: #777779;
+}
+
+.TimeSlot-blocked:hover {
+  cursor: default;
+}
+
+.TimeSlot-blocked:active {
+  background-color: #777779;
 }
