@@ -9,6 +9,8 @@ import Confirmada from "../../pages/Reservas/Confirmada";
 // importe de páginas especiales
 import Layout from "@/Layout";
 import ProtectedConfirmada from "../../components/ProtectedConfirmada/ProtectedConfirmada";
+import { ProtectedOnboarding } from "../../components/ProtectedOnboarding/ProtectedOnBoarding";
+import { Onboarding } from "../../components/Onboarding/Onboarding";
 
 // import PrivateRoute from '@/components/PrivateRoute'
 // import AdminRoute from '@/components/AdminRoute'
@@ -44,6 +46,15 @@ const router = createBrowserRouter([
         path: "/galeria",
         element: <Galeria />,
       },
+      {
+        path: "/onboarding",
+        element: (
+          <ProtectedOnboarding>
+            <Onboarding />
+          </ProtectedOnboarding>
+        ),
+      },
+
       {
         path: "*",
         element: <ErrorPage />,
