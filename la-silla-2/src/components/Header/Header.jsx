@@ -1,6 +1,7 @@
 import { NavHeader } from "../NavHeader/NavHeader";
 import "./Header.css";
 import { useLocation, useNavigate } from "react-router";
+import { Link } from "react-router";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ export const Header = () => {
   return (
     <header className="Header">
       <div>
-        <a href="/">
+        <Link to="/">
           <img
             src="/imgs/logo.png"
             alt="La [2] Silla"
@@ -33,7 +34,7 @@ export const Header = () => {
             className="Header-logoImage"
             loading="lazy"
           />
-        </a>
+        </Link>
       </div>
 
       <NavHeader goToSection={goToSection} />
