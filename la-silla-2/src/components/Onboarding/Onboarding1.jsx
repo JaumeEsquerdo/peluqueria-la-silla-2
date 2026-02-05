@@ -2,11 +2,13 @@ import "./onboarding.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { motion } from "framer-motion";
+/* `motion` actúa con framer motion para reconococer un elemento a animar */
 
 export const Onboarding1 = () => {
   const navigate = useNavigate();
   const [leaving, setLeaving] = useState(false);
 
+  /* useEffect para que `onAnimationComplete` se ponga en true y navegue al HOME */
   useEffect(() => {
     const t = setTimeout(() => setLeaving(true), 2000);
 

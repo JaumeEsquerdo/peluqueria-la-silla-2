@@ -3,6 +3,7 @@ import { Header } from "../../components//Header/Header.jsx";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+/* aquí está puesto 'motion' para q detecte framer motion el elmento a animar, y como está envuelto el Outlet con 'AnimatePresence' puede animar la entrada y salida de la página */
 
 const Home = () => {
   return (

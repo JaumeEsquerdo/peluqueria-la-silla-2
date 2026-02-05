@@ -5,9 +5,8 @@ import {
   useNavigate,
   useNavigationType,
 } from "react-router";
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import "./index.css";
-import { OnboardingContext } from "./context/OnboardingContext";
 import { AnimatePresence } from "framer-motion";
 
 function Layout() {
@@ -15,24 +14,23 @@ function Layout() {
   const location = useLocation();
 
   const navigationType = useNavigationType();
-  /* te dice cómo has llegado a esa ruta: 
-  - POP	refresh / URL directa / back-forward
+  /* 'navigationType' => te dice cómo has llegado a esa ruta: 
+  - POP	refresh / URL directa / back-forward (refresh TOTAL)
   - PUSH	click en <Link> o navigate()
   - REPLACE	navigate con { replace: true }
   */
-  const { seen } = useContext(OnboardingContext);
   const isOnboarding = location.pathname === "/onboarding";
 
+  /* useEffect para que volver a recargar el Onboarding cumpliendo condición de que recargue página desde Home */
   useEffect(() => {
     const isHome = location.pathname === "/";
-    const isOnboarding = location.pathname === "/onboarding";
 
     //  SOLO si fue recarga (POP) y estamos en home
     /* "POP" => Refresh / abrir URL / back-forward */
-    if (navigationType === "POP" && !seen && isHome && !isOnboarding) {
+    if (navigationType === "POP" && isHome) {
       navigate("/onboarding", { replace: true });
     }
-  }, [location.pathname, seen, navigate, navigationType]);
+  }, [location.pathname, navigate, navigationType]);
 
   return (
     <>
