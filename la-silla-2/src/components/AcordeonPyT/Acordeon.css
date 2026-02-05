@@ -1,0 +1,89 @@
+.Contenedor-acordeon {
+    padding: 10px;
+}
+
+.Contenedor-titulo {
+    font-size: 64px;
+    font-family: "Bebas Neue", sans-serif;
+    padding: 20px 10px;
+    color: #24257f;
+}
+
+.Contenedor-seccion {
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Contenedor-btn {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #24257f;
+    border: solid 2px #24257f;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.Contenedor-btn:hover {
+    background-color: #24257f;
+    color: #fff
+}
+
+.Contenedor-content {
+    padding: 16px;
+    border-radius: 20px;
+    background-color: #fff;
+    display: none;
+}
+
+.Contenedor-content.activo {
+    display: block;
+}
+
+/* Tablet: 768px a 1024px */
+@media (max-width: 1024px) {
+    .Contenedor-titulo {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .Contenedor-btn {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .Contenedor-content {
+        padding: 12px;
+        
+    }
+    .Contenedor-content {
+        margin-bottom: 1rem;
+        line-height: 2;
+    }
+}
+
+/* Móvil: menos de 768px */
+@media (max-width: 768px) {
+    .Contenedor-acordeon {
+        padding: 5px;
+    }
+
+    .Contenedor-titulo {
+        font-size: 1.8rem;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .Contenedor-btn {
+        font-size: 0.95rem;
+        padding: 8px;
+    }
+
+    .Contenedor-content {
+        padding: 10px;
+    }
+}

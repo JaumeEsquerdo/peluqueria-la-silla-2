@@ -10,6 +10,7 @@ import Confirmada from "../../pages/Reservas/Confirmada";
 import Layout from "@/Layout";
 import ProtectedConfirmada from "../../components/ProtectedConfirmada/ProtectedConfirmada";
 import { Onboarding } from "../../components/Onboarding/Onboarding";
+import { Privacidad } from "../../pages/Privacidad/Privacidad";
 
 // import PrivateRoute from '@/components/PrivateRoute'
 // import AdminRoute from '@/components/AdminRoute'
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/reservas",
         element: <Reservas />,
+      },
+      {
+        path: "/privacidad",
+        element: <Privacidad />,
       },
       {
         /* ruta protegida para no poder ir directamente por params */
