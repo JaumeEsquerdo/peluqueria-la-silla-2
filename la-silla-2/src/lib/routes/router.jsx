@@ -36,11 +36,6 @@ const router = createBrowserRouter([
           </ProtectedConfirmada>
         ),
       },
-      /* ruta protegida para no poder ir directamente por params */
-      // {
-      //   path: "/reservas/confirmada",
-      //   element: <Confirmada />,
-      // },
       {
         path: "/galeria",
         element: <Galeria />,
