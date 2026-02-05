@@ -1,0 +1,70 @@
+.Onboarding {
+  height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Onboarding1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Onboarding1-h1 {
+  font-family:
+    Bebas Neue,
+    sans;
+  color: #ff2828d8;
+  font-size: clamp(62px, 6vw, 128px);
+}
+
+.Onboarding2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Onboarding2-videoWrapper {
+  position: relative;
+}
+
+.Onboarding2-h2 {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: rgba(255, 255, 255, 0.902);
+  font-family:
+    Bebas Neue,
+    sans;
+  font-size: 4.4rem;
+  width: max-content;
+}
+
+.Onboarding2-video {
+  height: clamp(320px, 40vw, 660px);
+  max-width: 520px;
+  display: block;
+}
+
+.Onboarding2-h3 {
+  position: absolute;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: var(--main-color);
+  font-family:
+    Bebas Neue,
+    sans;
+  font-size: 10rem;
+  width: max-content;
+}

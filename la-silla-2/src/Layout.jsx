@@ -8,6 +8,7 @@ import {
 import { useContext, useEffect } from "react";
 import "./index.css";
 import { OnboardingContext } from "./context/OnboardingContext";
+import { AnimatePresence } from "framer-motion";
 
 function Layout() {
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ function Layout() {
   - REPLACE	navigate con { replace: true }
   */
   const { seen } = useContext(OnboardingContext);
+  const isOnboarding = location.pathname === "/onboarding";
 
   useEffect(() => {
     const isHome = location.pathname === "/";
@@ -34,8 +36,10 @@ function Layout() {
 
   return (
     <>
-      <Outlet />
-      <Footer />
+      <AnimatePresence mode="wait">
+        <Outlet key={location.pathname} />
+      </AnimatePresence>
+      {!isOnboarding && <Footer />}
     </>
   );
 }

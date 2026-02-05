@@ -2,10 +2,17 @@ import { Galeria } from "../../components/Galeria/Galeria";
 import { Header } from "../../components//Header/Header.jsx";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <main className="Home-body">
+    <motion.main
+      className="Home-body"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       {/* INICIO APARTADO HERO */}
       <section className="Home-hero">
         <Header />
@@ -170,7 +177,7 @@ const Home = () => {
         </div>
       </section>
       {/* FINAL APARTADO PRECIOS */}
-    </main>
+    </motion.main>
   );
 };
 
