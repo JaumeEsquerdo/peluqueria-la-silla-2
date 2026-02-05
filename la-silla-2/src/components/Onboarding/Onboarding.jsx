@@ -1,9 +1,7 @@
 // import { useNavigate } from "react-router";
-import { OnboardingContext } from "../../context/OnboardingContext";
 // import { useContext, useEffect, useState } from "react";
 import "./onboarding.css";
 import { Onboarding1 } from "./Onboarding1";
-import { Onboarding2 } from "./Onboarding2";
 
 export const Onboarding = () => {
   // const [step, setStep] = useState(1);
