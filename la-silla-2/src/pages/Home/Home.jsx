@@ -1,5 +1,6 @@
 import { Galeria } from "../../components/Galeria/Galeria";
 import { Header } from "../../components//Header/Header.jsx";
+import  AnimatedTitle from "../../components/TituloAnimado/AnimatedTitle";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -17,13 +18,13 @@ const Home = () => {
       {/* INICIO APARTADO HERO */}
       <section className="Home-hero">
         <Header />
-        <div className="Home-section-photo">
-          <img
-            className="Home-img"
-            src="/imgs/cabecera.png"
-            alt="La [2] Silla"
-            title="La [2] Silla"
-          />
+          <AnimatedTitle />
+
+
+
+        {/* <div className="Home-section-photo">
+          <img className="Home-img" src="/imgs/cabecera.jpg" alt="La [2] Silla" title="La [2] Silla"/>
+          <img className="Home-imgTitle" src="/imgs/cabeceraTitulo.png" alt="" />
         </div>
         <section className="Home-section-text">
           <p className="Home-text">
@@ -36,7 +37,10 @@ const Home = () => {
             PORT SAPLAYA
             <br />[ VALENCIA ]
           </p>
-        </section>
+        </section> */}
+
+
+
       </section>
       {/* FINAL APARTADO HERO */}
 
