@@ -67,6 +67,7 @@ const AnimatedTitle = ({ heroImage, title = "LA (2) SILLA" }) => {
                     <h1 className="hero-title">
                         {title}
                     </h1>
+                    <h2 className="hero-subtitle">Av. de la Mar 6 VALENCIA</h2>
                     <div className="scroll-indicator">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -82,6 +83,8 @@ const AnimatedTitle = ({ heroImage, title = "LA (2) SILLA" }) => {
                             <circle cx="12" cy="12" r="10" />
                             <path d="M8 12l4 4 4-4M12 8v8" />
                         </svg>
+                        
+                        <h2></h2>
                     </div>
                 </div>
 

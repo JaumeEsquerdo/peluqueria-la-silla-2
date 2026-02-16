@@ -1,5 +1,4 @@
 import { Galeria } from "../../components/Galeria/Galeria";
-// import { Header } from "../../components//Header/Header.jsx";
 import  AnimatedTitle from "../../components/TituloAnimado/AnimatedTitle";
 import "./Home.css";
 import { Link } from "react-router-dom";
@@ -11,7 +10,6 @@ import { Precios } from "../Precios/Precios";
 const Home = () => {
   return (
     <motion.main className="Home-body" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}>
-      {/* <Header /> */}
       <section className="Home-hero">
           <AnimatedTitle />
       </section>
