@@ -6,24 +6,24 @@ import { NavHeader } from "../NavHeader/NavHeader";
 
 const AnimatedTitle = ({ heroImage, title = "LA (2) SILLA" }) => {
     const navigate = useNavigate();
-        const location = useLocation();
+    const location = useLocation();
 
-        const goToSection = async (id) => {
-            // si no estas en home, ves primero
-            if (location.pathname !== "/") {
-                // replace: false -> añade "/" al historial, así al volver atrás regresa a "/reservas".
-                // Si fuera true, reemplaza "/reservas" por "/" y el botón atrás no volvería a "/reservas".
-                navigate("/", { replace: false });
-                // esperar un nada a que renderice Home
-                setTimeout(() => {
-                    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-                }, 50);
-            } else {
-                // si ya está en Home navega sin setTimeout
+    const goToSection = async (id) => {
+        // si no estas en home, ves primero
+        if (location.pathname !== "/") {
+            // replace: false -> añade "/" al historial, así al volver atrás regresa a "/reservas".
+            // Si fuera true, reemplaza "/reservas" por "/" y el botón atrás no volvería a "/reservas".
+            navigate("/", { replace: false });
+            // esperar un nada a que renderice Home
+            setTimeout(() => {
                 document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-            }
-        };
-        
+            }, 50);
+        } else {
+            // si ya está en Home navega sin setTimeout
+            document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
@@ -59,7 +59,7 @@ const AnimatedTitle = ({ heroImage, title = "LA (2) SILLA" }) => {
             {/* Hero Section con imagen y título */}
             <div className="hero-section">
                 <div className="hero-image">
-                    <img src="/imgs/cabecera.jpg" alt="Barbería La 2 Silla" title="Barbería La 2 Silla" />
+                    <img src="/imgs/cabecera2.jpg" alt="Barbería La 2 Silla" title="Barbería La 2 Silla" />
                     <div className="hero-overlay"></div>
                 </div>
 
@@ -67,9 +67,24 @@ const AnimatedTitle = ({ heroImage, title = "LA (2) SILLA" }) => {
                     <h1 className="hero-title">
                         {title}
                     </h1>
-                    <img className="hero-icon"src="/imgs/ico-flecha.png" alt="Ver más" />
+                    <div className="scroll-indicator">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="48"
+                            height="48"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M8 12l4 4 4-4M12 8v8" />
+                        </svg>
+                    </div>
                 </div>
-                    
+
             </div>
 
             {/* Navbar con logo pequeño */}

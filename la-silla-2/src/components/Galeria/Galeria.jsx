@@ -21,6 +21,7 @@ export const Galeria = ({ id }) => {
   return (
     <div id={id} className="GaleriaSection">
       <div className="GaleriaSection-content">
+      <h2 className="Galeria-titulo">GALERÍA</h2>
         <header className="GaleriaHeader">
           <div className="GaleriaHeader-div">
             <h3 className="GaleriaHeader-h3">NUESTROS CORTES</h3>
@@ -68,7 +69,7 @@ export const Galeria = ({ id }) => {
             </AnimatePresence>
           </div>
         </div>
-        <h2 className="Galeria-titulo">GALERÍA</h2>
+        
       </div>
     </div>
   );

@@ -3,23 +3,20 @@ SOBRE NOSOTROS
 ========================= */
 
 .Nosotros-body {
-    display: flex;
-    gap: clamp(20px, 4vw, 60px);
-    padding: clamp(30px, 5vw, 80px);
+    padding: 20px 30px;
     background: #f2f3f5;
 }
 
 /* TÍTULO VERTICAL */
 .Nosotros-title {
-    min-width: 120px;
     font-family: "Bebas Neue", sans-serif;
-    font-size: clamp(64px, 8vw, 120px);
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+    font-size: clamp(50px, 8vw, 100px);
     font-weight: 700;
-    color: #2b2e83;
-    letter-spacing: 4px;
-    line-height: 1;
+    text-align: center;
+    color: #24257f;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    margin-top: 40px;
 }
 
 /* CONTENIDO */
@@ -47,6 +44,7 @@ SOBRE NOSOTROS
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
+    padding-top: 20px;
 }
 
 .Nosotros-image img {
@@ -68,29 +66,26 @@ SOBRE NOSOTROS
 /* =========================
     NOSOTROS RESPONSIVE
   ========================= */
-
 @media (max-width: 900px) {
-    .Nosotros-body {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .Nosotros-text {
-        text-align: left;
-    }
-
-    .Nosotros-title {
-        writing-mode: horizontal-tb;
-        transform: none;
-        margin-bottom: 20px;
-    }
-
     .Nosotros-content {
         grid-template-columns: 1fr;
     }
 
-    .Nosotros-imgTop,
-    .Nosotros-imgBottom {
+    .Nosotros-imgTop {
+        order: 1;
         grid-column: auto;
+    }
+
+    .Nosotros-text:first-child {
+        order: 2;
+    }
+
+    .Nosotros-imgBottom {
+        order: 3;
+        grid-column: auto;
+    }
+
+    .Nosotros-text:last-child {
+        order: 4;
     }
 }

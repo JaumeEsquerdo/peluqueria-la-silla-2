@@ -6,6 +6,17 @@
   align-items: center;
 }
 
+.Galeria-titulo {
+  font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(50px, 8vw, 100px);
+    font-weight: 700;
+    text-align: center;
+    color: #24257f;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
 .GaleriaSection-content {
   min-height: 100vh;
   background-color: var(--bg-color);
@@ -125,12 +136,7 @@
   color: var(--text-color);
 }
 
-.Galeria-titulo {
-  font-size: clamp(64px, 8vw, 120px);
-  font-family: "Bebas Neue", sans-serif;
-  color: var(--main-color);
-  line-height: 0.9;
-}
+
 
 @media (max-width: 900px) {
   .GaleriaSection-content {

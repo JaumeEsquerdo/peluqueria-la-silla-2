@@ -1,10 +1,3 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Hero Section */
 .hero-section {
     display: flex;
@@ -19,25 +12,17 @@
 
 /* Imagen de fondo del hero */
 .hero-image {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     inset: 0;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
+    opacity: calc(1 - var(--scroll-progress) * 0.7);
     transition: opacity 0.1s linear;
 }
 
 .hero-image img {
-    display: flex;
-    flex-direction: column;
+    filter: grayscale();
     width: 100%;
-    max-width: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-overlay {
@@ -57,13 +42,34 @@
     flex-direction: column;
     position: absolute;
     inset: 0;
-    justify-content:flex-end;
+    justify-content: flex-end;
     padding-bottom: 40px;
     /* z-index: 1; */
     pointer-events: none;
     transform: translateY(calc(var(--scroll-progress) * -350px)) scale(calc(1 - var(--scroll-progress) * 0.65));
     opacity: calc(1 - var(--scroll-progress) * 0.4);
     transition: transform 0.05s linear, opacity 0.1s linear;
+}
+
+.scroll-indicator {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    color: #ef4444;
+    opacity: calc(1 - var(--scroll-progress) * 3);
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
 }
 
 .hero-title {
@@ -156,6 +162,14 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+@media (max-width:900px) {
+    .hero-image img {
+        object-position: 75% center; /* si el sujeto está a la derecha, por ejemplo */
+    }
+    .hero-title {
+        font-size: clamp(5rem, 20vw, 10rem);
+    }
+}
 @media (max-width: 400px) {
     .navbar-container {
         opacity: 0;

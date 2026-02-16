@@ -14,7 +14,7 @@ PRECIOS Y SERVICIOS
     text-align: center;
     color: #24257f;
     letter-spacing: 2px;
-    margin-bottom: clamp(40px, 6vw, 80px);
+    margin-bottom: 10px;
 }
 
 .Prices-grid {
