@@ -1,3 +1,8 @@
+/* para ajustar y que quede el scroll de los enlaces justo donde se vea el titulo de la sección */
+[id] {
+  scroll-margin-top: 80px;
+}
+
 /* =========================
 HOME
 ========================= */
@@ -30,16 +35,15 @@ HOME
   filter: grayscale(100%);
 }
 
-.Home-img:hover{
+.Home-img:hover {
   filter: none;
 }
 
-.Home-imgTitle{
+.Home-imgTitle {
   position: absolute;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  
 }
 
 /* Sección texto */
@@ -91,6 +95,3 @@ HOME RESPONSIVE
     max-width: 100%;
   }
 }
-
-
-
