@@ -1,8 +1,25 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+
 export const NavHeader = ({ goToSection }) => {
   const [navOpen, setNavOpen] = useState(false);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setNavOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav className="Header-nav">
+    <nav ref={navRef} className="Header-nav">
       <button
         className="Hamburguesa-contenedor"
         onClick={() => setNavOpen(!navOpen)}
