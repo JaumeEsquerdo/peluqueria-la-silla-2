@@ -41,7 +41,8 @@ CSS HEADER GENERAL
   cursor: pointer;
   border: none;
   color: #333333;
-  background: #f2f3f5;
+  background: none;
+
   text-decoration: none;
 }
 
@@ -83,7 +84,7 @@ CSS HEADER GENERAL
 
   .Header-navList {
     position: absolute;
-    top: 60px;
+    top: 90px;
     right: 0;
     width: 220px;
     display: flex;
@@ -100,6 +101,14 @@ CSS HEADER GENERAL
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+  }
+
+  .Header-li {
+    width: 60%;
+    background-color: #f2f3f5;
+  }
+  .Header-navLink {
+    padding: 10px 12px;
   }
   .Hamburguesa {
     position: absolute;
