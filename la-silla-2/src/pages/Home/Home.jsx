@@ -4,7 +4,7 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Nosotros } from "../Nosotros/Nosotros";
-import { Precios } from "../Precios/Precios";
+import { Servicios } from "../Servicios/Servicios";
 /* aquí está puesto 'motion' para q detecte framer motion el elmento a animar, y como está envuelto el Outlet con 'AnimatePresence' puede animar la entrada y salida de la página */
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
       </section>
       <Galeria id="galeria" />
       <Nosotros />
-      <Precios />
+      <Servicios />
     </motion.main>
   );
 };

@@ -1,9 +1,9 @@
-import "./Precios.css"
+import "./Servicios.css"
 
-export const Precios = () => {
+export const Servicios = () => {
     return (
         <section className="Prices-body" id="precios">
-            <h2 className="Prices-title">PRECIOS Y SERVICIOS</h2>
+            <h2 className="Prices-title">NUESTROS SERVICIOS</h2>
 
             <div className="Prices-grid">
                 {/* <!-- Texto de la izquierda --> */}

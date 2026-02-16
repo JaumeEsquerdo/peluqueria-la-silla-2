@@ -32,7 +32,7 @@ export const NavHeader = ({ goToSection }) => {
             className="Header-navLink"
             onClick={() => goToSection("precios")}
           >
-            PRECIOS/RESERVAS
+            PRECIOS
           </button>
         </li>
       </ul>

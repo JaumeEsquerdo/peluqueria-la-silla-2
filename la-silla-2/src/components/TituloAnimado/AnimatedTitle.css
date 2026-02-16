@@ -45,7 +45,7 @@
     justify-content: flex-end;
     padding-bottom: 40px;
     /* z-index: 1; */
-    pointer-events: none;
+    /* pointer-events: none; */
     transform: translateY(calc(var(--scroll-progress) * -350px)) scale(calc(1 - var(--scroll-progress) * 0.65));
     opacity: calc(1 - var(--scroll-progress) * 0.4);
     transition: transform 0.05s linear, opacity 0.1s linear;
@@ -53,19 +53,33 @@
 .hero-subtitle {
     display: flex;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 1.8rem;
     margin-top: 0.5rem;
     color: #ef4444;
     opacity: calc(1 - var(--scroll-progress) * 3);
     
 }
+
+.hero-cta{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    color: #ef4444;
+    opacity: calc(1 - var(--scroll-progress) * 3);
+}
+
 .scroll-indicator {
+    z-index: 200;
     display: flex;
     justify-content: center;
     margin-top: 2rem;
     color: #ef4444;
     opacity: calc(1 - var(--scroll-progress) * 3);
     animation: bounce 1.5s ease-in-out infinite;
+
+    cursor: pointer;
+    pointer-events: all;
 }
 
 @keyframes bounce {
@@ -151,7 +165,7 @@
 }
 
 .navbar-logo h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #ef4444;
     white-space: nowrap;
