@@ -103,8 +103,9 @@
 
 .Seleccion-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
+  justify-content: center;
   padding-top: 60px;
 }
 
@@ -310,7 +311,9 @@
     min-width: auto;
     width: 100%;
   }
-
+  .Reservas-content {
+    width: 75%;
+  }
   .Sticky-container {
     width: 100%;
   }

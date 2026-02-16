@@ -16,12 +16,12 @@ const images = [
   "/imgs/corte-10.png",
 ];
 export const Galeria = ({ id }) => {
-  const visibleImages = useGallerySwap(images, 4000, 2);
+  const visibleImages = useGallerySwap(images, 4500, 2);
 
   return (
     <div id={id} className="GaleriaSection">
       <div className="GaleriaSection-content">
-      <h2 className="Galeria-titulo">GALERÍA</h2>
+        <h2 className="Galeria-titulo">GALERÍA</h2>
         <header className="GaleriaHeader">
           <div className="GaleriaHeader-div">
             <h3 className="GaleriaHeader-h3">NUESTROS CORTES</h3>
@@ -63,13 +63,14 @@ export const Galeria = ({ id }) => {
                     src={src}
                     alt="imágenes de la peluquería"
                     className="Galeria-img"
+                    width="200"
+                    height="300"
                   />
                 </motion.div>
               ))}
             </AnimatePresence>
           </div>
         </div>
-        
       </div>
     </div>
   );
