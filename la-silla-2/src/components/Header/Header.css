@@ -29,6 +29,7 @@ CSS HEADER GENERAL
 .Header-navList {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   list-style: none;
   text-decoration: none;
 }
@@ -42,17 +43,20 @@ CSS HEADER GENERAL
   border: none;
   color: #333333;
   background: none;
-
   text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
 .Header-navLink img {
   width: 25px;
 }
 
-.Header-navLink:hover {
-  scale: 1.1;
-  text-decoration-thickness: 1px;
+/* Solo aplica la regla CSS dentro de la media query si el dispositivo soporta hover (es decir un mouse) */
+@media (hover: hover) {
+  .Header-navLink:hover {
+    transform: scale(1.1);
+    text-decoration-thickness: 1px;
+  }
 }
 /* hamburguesa nav */
 
@@ -97,13 +101,8 @@ CSS HEADER GENERAL
     transition: all 0.4s ease;
   }
 
-  .Header-navList.isOpen {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
   .Header-li {
+    border: 1px solid #f2f3f5;
     width: 60%;
     background-color: #f2f3f5;
   }
@@ -150,7 +149,11 @@ CSS HEADER GENERAL
   .Hamburguesa.isOpen::before {
     transform: rotate(-4deg);
   }
+
   .Header-navList.isOpen {
-    display: flex; /* si está abierto vuelve a aparecer */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: flex;
   }
 }
