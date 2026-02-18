@@ -151,6 +151,7 @@ La app estará en `http://localhost:5173`
 - [ ] Integración con Google Calendar para disponibilidad real-time
 - [ ] Dashboard de administración para el cliente
 - [ ] PWA para instalación en móvil
+- [ ] Integración posible de Backend para registrar los datos de las reservas
 
 ---
 
