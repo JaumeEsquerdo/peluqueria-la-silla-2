@@ -51,6 +51,10 @@ CSS HEADER GENERAL
   width: 25px;
 }
 
+.Header-navLink--Link {
+  display: inline-block;
+}
+
 /* Solo aplica la regla CSS dentro de la media query si el dispositivo soporta hover (es decir un mouse) */
 @media (hover: hover) {
   .Header-navLink:hover {
@@ -58,11 +62,6 @@ CSS HEADER GENERAL
     text-decoration-thickness: 1px;
   }
 }
-
-/* .Header-navLink--Link Link {
-  transform: scale(1.1);
-  text-decoration-thickness: 1px;
-} */
 
 /* hamburguesa nav */
 
