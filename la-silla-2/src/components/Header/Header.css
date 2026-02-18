@@ -58,6 +58,12 @@ CSS HEADER GENERAL
     text-decoration-thickness: 1px;
   }
 }
+
+/* .Header-navLink--Link Link {
+  transform: scale(1.1);
+  text-decoration-thickness: 1px;
+} */
+
 /* hamburguesa nav */
 
 /* oculto el checkbox */

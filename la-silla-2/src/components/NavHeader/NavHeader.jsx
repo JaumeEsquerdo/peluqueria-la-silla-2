@@ -54,7 +54,7 @@ export const NavHeader = ({ goToSection }) => {
           </button>
         </li>
         <li className="Header-li">
-          <Link className="Header-navLink" to="/reservas">
+          <Link className="Header-navLink Header-navLink--Link" to="/reservas">
             RESERVAR
           </Link>
         </li>
