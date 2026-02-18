@@ -33,7 +33,12 @@ export const Galeria = ({ id }) => {
 
         <div className="GaleriaContent">
           <div className="GaleriaIzq">
-            <img src="/imgs/pelu-1.png" alt="" className="GaleriaIzq-img" />
+            <img
+              src="/imgs/pelu-1.png"
+              alt=""
+              className="GaleriaIzq-img"
+              lazy="loading"
+            />
             <div className="GaleriaContent-textoDiv">
               <p className="GaleriaContent-texto">
                 EN LA SILLA 2 CUIDAMOS CADA CORTE COMO PARTE DE TU IDENTIDAD.
@@ -65,6 +70,7 @@ export const Galeria = ({ id }) => {
                     className="Galeria-img"
                     width="200"
                     height="300"
+                    lazy="loading"
                   />
                 </motion.div>
               ))}
