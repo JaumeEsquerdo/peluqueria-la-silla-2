@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const NavHeader = ({ goToSection }) => {
   const [navOpen, setNavOpen] = useState(false);
@@ -51,6 +52,11 @@ export const NavHeader = ({ goToSection }) => {
           >
             PRECIOS
           </button>
+        </li>
+        <li className="Header-li">
+          <Link className="Header-navLink" to="/reservas">
+            RESERVAR
+          </Link>
         </li>
       </ul>
     </nav>
