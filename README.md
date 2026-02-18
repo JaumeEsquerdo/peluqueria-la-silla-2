@@ -1,13 +1,13 @@
 # LA (2) SILLA - Case Study
 
-  
-  ### Proyecto web moderno para peluquería local con sistema de reservas online.
-  
-  [🔗 Ver Demo](https://la2silla.vercel.app) | [📂 Ver Código](https://github.com/usuario/la2silla)
-  
-  ![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react)
-  ![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite)
-  ![CSS3](https://img.shields.io/badge/CSS3-Native-1572B6?logo=css3)
+### Proyecto web moderno para peluquería local con sistema de reservas online.
+
+[🔗 Ver Demo](https://la2silla.vercel.app) | [📂 Ver Código](https://github.com/usuario/la2silla)
+
+![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react)
+![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite)
+![CSS3](https://img.shields.io/badge/CSS3-Native-1572B6?logo=css3)
+
 </div>
 
 ---
@@ -17,7 +17,8 @@
 Nos encontramos con el caso de una peluquería local en Valencia que perdía clientes potenciales por no tener presencia digital. El dueño nos comenta que el proceso de reserva es 100% telefónico, ya sea vía Whatsapp o por llamada. Adaptándose a las nuevas generaciones y con un target joven, este método de reserva es ineficiente y limitado por el horario comercial haciendo que los potenciales clientes no puedan consultar horarios, servicios ni precios por los diferentes servicios que la peluquería ofrece.
 
 ## NUESTRO OBJETIVO:
-Crear una web moderna y atractiva que refleje la calidad de los servicios que la peluquería proporciona a sus clientes. Crear apartados donde poder ver resultados de otros clientes, conocer lo que hay detrás del negocio y  reservas moderno y sin horarios comerciales 
+
+Crear una web moderna y atractiva que refleje la calidad de los servicios que la peluquería proporciona a sus clientes. Crear apartados donde poder ver resultados de otros clientes, conocer lo que hay detrás del negocio y reservas moderno y sin horarios comerciales
 
 ---
 
@@ -26,8 +27,9 @@ Crear una web moderna y atractiva que refleje la calidad de los servicios que la
 Desarrollamos una **Single Page Application** con animaciones fluidas, diseño responsive y sistema de reservas integrado.
 
 ### Características Clave
+
 - **Hero animado con scroll parallax** - El título se reduce y posiciona en el navbar al scrollear
-- **Sistema de reservas 24/7** - Formulario optimizado con validación en tiempo real  
+- **Sistema de reservas 24/7** - Formulario optimizado con validación en tiempo real
 - **100% Responsive** - Mobile-first design que funciona en cualquier dispositivo
 
 ---
@@ -39,6 +41,7 @@ Frontend:    React 18 + Vite + React Router v6
 Estilos:     CSS3 vanilla (sin librerías)
 Deployment:  Vercel con CI/CD automático
 ```
+
 ---
 
 ## DECISIONES CLAVE PROPUESTAS:
@@ -48,17 +51,18 @@ Deployment:  Vercel con CI/CD automático
 **El reto:** Animar el título al hacer scroll sin comprometer los 60fps.
 
 **La solución:**
+
 ```javascript
 // Actualizamos una CSS variable en el scroll
 const scrollProgress = Math.min(scrollY / 500, 1);
-hero.style.setProperty('--scroll-progress', scrollProgress);
+hero.style.setProperty("--scroll-progress", scrollProgress);
 ```
 
 ```css
 /* CSS calcula la transformación en GPU */
 .hero-title-container {
-  transform: translateY(calc(var(--scroll-progress) * -350px)) 
-             scale(calc(1 - var(--scroll-progress) * 0.65));
+  transform: translateY(calc(var(--scroll-progress) * -350px))
+    scale(calc(1 - var(--scroll-progress) * 0.65));
   transition: transform 0.05s linear;
 }
 ```
@@ -72,6 +76,7 @@ hero.style.setProperty('--scroll-progress', scrollProgress);
 **El reto:** Al navegar desde `/reservas` a `/#nosotros`, el scroll no funcionaba porque Home aún no estaba renderizado.
 
 **La solución:**
+
 ```javascript
 const goToSection = (id) => {
   if (location.pathname !== "/") {
@@ -95,6 +100,7 @@ const goToSection = (id) => {
 **El reto:** Evitar múltiples breakpoints para tamaños de fuente.
 
 **La solución:**
+
 ```css
 /* Escala fluido entre 4rem y 13rem según el viewport */
 .hero-title {
@@ -129,16 +135,19 @@ La app estará en `http://localhost:5173`
 ## RESULTADOS:
 
 **Lo que funcionó:**
+
 - Mobile-first approach simplificó el diseño responsive
 - Comunicación semanal con el cliente evitó sorpresas
 - Animaciones CSS nativas > librerías pesadas (GSAP añadía 50KB)
 
 **Desafíos superados:**
+
 - Balance estética/performance → Eliminamos librerías innecesarias
 - Sincronización router + scroll → Aprendimos React Router en profundidad
 - Optimización de imágenes → Implementamos WebP + lazy loading
 
 **Próximas mejoras:**
+
 - [ ] Integración con Google Calendar para disponibilidad real-time
 - [ ] Dashboard de administración para el cliente
 - [ ] PWA para instalación en móvil
@@ -147,10 +156,10 @@ La app estará en `http://localhost:5173`
 
 ## EQUIPO:
 
-**Jaume Esquerdo** - Frontend Developer  - **[Jaime Nebot]** - Frontend Developer  
-Arquitectura React • Animaciones • Responsive Design • Sistema de Reservas • Optimización • Testing 
+**Jaume Esquerdo** - Frontend Developer - **[Jaime Nebot]** - Frontend Developer  
+Arquitectura React • Animaciones • Responsive Design • Sistema de Reservas • Optimización • Testing
 
-tuemail@ejemplo.com | 💼 [LinkedIn](https://www.linkedin.com/in/jaume-esquerdo/)
+jaume.esquerdo@hotmail.com | 💼 [LinkedIn](https://www.linkedin.com/in/jaume-esquerdo/)
 jaime.nebot.colom@gmail.com | 💼 [LinkedIn](https://www.linkedin.com/in/jaime-nebot-54132419b/)
 
 ---
