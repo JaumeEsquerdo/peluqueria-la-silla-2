@@ -21,6 +21,7 @@
     Bebas Neue,
     sans;
   color: #ff2828d8;
+  pointer-events: none;
   font-size: clamp(62px, 6vw, 128px);
 }
 
