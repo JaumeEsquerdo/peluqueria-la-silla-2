@@ -166,7 +166,7 @@ jaime.nebot.colom@gmail.com | 💼 [LinkedIn](https://www.linkedin.com/in/jaime-
 
 ## ENLACES DEL PROYECTO:
 
-- **Demo en vivo:** [la2silla.vercel.app](https://la2silla.vercel.app)
+- **Demo en vivo:** [la2silla.vercel.app](https://la-2-silla.vercel.app/)
 - **Código fuente:** [github.com/usuario/la2silla](https://github.com/usuario/la2silla)
 - **Portfolio:** [tuportfolio.com](https://tuportfolio.com)
 
