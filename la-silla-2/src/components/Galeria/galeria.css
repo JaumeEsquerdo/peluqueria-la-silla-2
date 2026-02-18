@@ -133,6 +133,7 @@
 }
 
 .GaleriaContent-texto {
+  font-size: 1.25rem;
   color: var(--text-color);
 }
 
