@@ -32,6 +32,14 @@ function Layout() {
     }
   }, [location.pathname, navigate, navigationType]);
 
+  /* scroll automático arriba al cambiar de ruta */
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [location.pathname]);
+
   return (
     <>
       <AnimatePresence mode="wait">

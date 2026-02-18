@@ -48,8 +48,7 @@ export const Galeria = ({ id }) => {
                 SENTIRTE CÓMODO.
               </p>
               <p className="GaleriaContent-texto">
-                UN ESPACIO CON ESTILO Y CRITERIO PARA ENCONTRAR EL CORTE QUE
-                MEJOR TE QUEDA.{" "}
+                UN ESPACIO CON ESTILO Y CRITERIO.
               </p>
             </div>
           </div>

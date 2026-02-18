@@ -20,11 +20,11 @@
   color: #f2f3f5;
   font-size: 1rem;
   padding-bottom: 10px;
+  transition: transform 0.3s ease;
 }
 
 .Footer-link:hover {
-  font-weight: bold;
-  font-size: 1.1rem;
+  transform: scale(1.1);
 }
 
 .Footer-text {

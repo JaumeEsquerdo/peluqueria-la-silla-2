@@ -175,6 +175,10 @@
   white-space: nowrap;
 }
 
+.Navbar-title {
+  pointer-events: none;
+}
+
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
