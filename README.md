@@ -1,7 +1,7 @@
 # LA (2) SILLA - Case Study
 
   
-  ### 💈 Web moderna para barbería con sistema de reservas online
+  ### Proyecto web moderno para peluquería local con sistema de reservas online.
   
   [🔗 Ver Demo](https://la2silla.vercel.app) | [📂 Ver Código](https://github.com/usuario/la2silla)
   
@@ -26,10 +26,9 @@ Crear una web moderna y atractiva que refleje la calidad de los servicios que la
 Desarrollamos una **Single Page Application** con animaciones fluidas, diseño responsive y sistema de reservas integrado.
 
 ### Características Clave
-- ✅ **Hero animado con scroll parallax** - El título se reduce y posiciona en el navbar al scrollear
-- ✅ **Sistema de reservas 24/7** - Formulario optimizado con validación en tiempo real  
-- ✅ **100% Responsive** - Mobile-first design que funciona en cualquier dispositivo
-- ✅ **Performance optimizada** - Lighthouse score 96/100, carga <2s
+- **Hero animado con scroll parallax** - El título se reduce y posiciona en el navbar al scrollear
+- **Sistema de reservas 24/7** - Formulario optimizado con validación en tiempo real  
+- **100% Responsive** - Mobile-first design que funciona en cualquier dispositivo
 
 ---
 
@@ -40,17 +39,11 @@ Frontend:    React 18 + Vite + React Router v6
 Estilos:     CSS3 vanilla (sin librerías)
 Deployment:  Vercel con CI/CD automático
 ```
-
-**¿Por qué este stack?**
-- React + Vite → Desarrollo rápido con HMR instantáneo
-- CSS vanilla → Cero dependencias, máxima performance
-- Vercel → Deploy automático en cada push
-
 ---
 
-## 🧠 Decisiones Técnicas Clave
+## DECISIONES CLAVE PROPUESTAS:
 
-### 1️⃣ Hero Animado con CSS Variables
+### 1️-Hero Animado con CSS Variables
 
 **El reto:** Animar el título al hacer scroll sin comprometer los 60fps.
 
@@ -74,7 +67,7 @@ hero.style.setProperty('--scroll-progress', scrollProgress);
 
 ---
 
-### 2️⃣ Navegación Inteligente Entre Páginas
+### 2️-Navegación Inteligente Entre Páginas
 
 **El reto:** Al navegar desde `/reservas` a `/#nosotros`, el scroll no funcionaba porque Home aún no estaba renderizado.
 
@@ -97,7 +90,7 @@ const goToSection = (id) => {
 
 ---
 
-### 3️⃣ Tipografía Responsive Sin Media Queries
+### 3️-Tipografía Responsive Sin Media Queries
 
 **El reto:** Evitar múltiples breakpoints para tamaños de fuente.
 
@@ -133,17 +126,17 @@ La app estará en `http://localhost:5173`
 
 ---
 
-## 🎓 Aprendizajes
+## RESULTADOS:
 
 **Lo que funcionó:**
-- ✅ Mobile-first approach simplificó el diseño responsive
-- ✅ Comunicación semanal con el cliente evitó sorpresas
-- ✅ Animaciones CSS nativas > librerías pesadas (GSAP añadía 50KB)
+- Mobile-first approach simplificó el diseño responsive
+- Comunicación semanal con el cliente evitó sorpresas
+- Animaciones CSS nativas > librerías pesadas (GSAP añadía 50KB)
 
 **Desafíos superados:**
-- 🔧 Balance estética/performance → Eliminamos librerías innecesarias
-- 🔧 Sincronización router + scroll → Aprendimos React Router en profundidad
-- 🔧 Optimización de imágenes → Implementamos WebP + lazy loading
+- Balance estética/performance → Eliminamos librerías innecesarias
+- Sincronización router + scroll → Aprendimos React Router en profundidad
+- Optimización de imágenes → Implementamos WebP + lazy loading
 
 **Próximas mejoras:**
 - [ ] Integración con Google Calendar para disponibilidad real-time
@@ -157,8 +150,8 @@ La app estará en `http://localhost:5173`
 **Jaume Esquerdo** - Frontend Developer  - **[Jaime Nebot]** - Frontend Developer  
 Arquitectura React • Animaciones • Responsive Design • Sistema de Reservas • Optimización • Testing 
 
-tuemail@ejemplo.com | 💼 [LinkedIn](https://linkedin.com/in/tu-perfil)
-sumail@ejemplo.com | 💼 [LinkedIn](https://linkedin.com/in/su-perfil)
+tuemail@ejemplo.com | 💼 [LinkedIn](https://www.linkedin.com/in/jaume-esquerdo/)
+jaime.nebot.colom@gmail.com | 💼 [LinkedIn](https://www.linkedin.com/in/jaime-nebot-54132419b/)
 
 ---
 
@@ -171,6 +164,5 @@ sumail@ejemplo.com | 💼 [LinkedIn](https://linkedin.com/in/su-perfil)
 ---
 
 <div align="center">
-  <p><strong>Proyecto del Máster en Desarrollo Web - 2026</strong></p>
-  <p>Este proyecto demuestra nuestra capacidad para resolver problemas reales de negocio mediante soluciones técnicas sólidas y diseño centrado en el usuario.</p>
+  <p><strong>Proyecto LA [2] SILLA - 2026</strong></p>
 </div>
