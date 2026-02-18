@@ -2,7 +2,7 @@
 
 ### Proyecto web moderno para peluquería local con sistema de reservas online.
 
-[🔗 Ver Demo](https://la2silla.vercel.app) | [📂 Ver Código](https://github.com/usuario/la2silla)
+[🔗 Ver Demo](https://la-2-silla.vercel.app/) | [📂 Ver Código](https://github.com/JaumeEsquerdo/peluqueria-la-silla-2)
 
 ![React](https://img.shields.io/badge/React-18.2-61DAFB?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?logo=vite)
@@ -167,8 +167,9 @@ jaime.nebot.colom@gmail.com | 💼 [LinkedIn](https://www.linkedin.com/in/jaime-
 ## ENLACES DEL PROYECTO:
 
 - **Demo en vivo:** [la2silla.vercel.app](https://la-2-silla.vercel.app/)
-- **Código fuente:** [github.com/usuario/la2silla](https://github.com/usuario/la2silla)
-- **Portfolio:** [tuportfolio.com](https://tuportfolio.com)
+- **Código fuente:** [github.com/usuario/la2silla](https://github.com/JaumeEsquerdo/peluqueria-la-silla-2)
+- **Portfolio Jaime Nebot:** [tuportfolio.com](https://tuportfolio.com)
+- **Portfolio Jaume Esquerdo:** [tuportfolio.com](https://tuportfolio.com)
 
 ---
 
