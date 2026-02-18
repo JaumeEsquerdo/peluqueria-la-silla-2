@@ -156,12 +156,16 @@ La app estará en `http://localhost:5173`
 
 ## EQUIPO:
 
-**Jaume Esquerdo** - Frontend Developer  
+**Jaume Esquerdo** - Frontend Developer
+
 Arquitectura React • Animaciones • Responsive Design • Sistema de Reservas • Optimización • Testing
+
 jaume.esquerdo@hotmail.com | 💼 [LinkedIn](https://www.linkedin.com/in/jaume-esquerdo/)
 
-**[Jaime Nebot]** - Frontend Developer
+**Jaime Nebot** - Frontend Developer
+
 Arquitectura React • Animaciones • Responsive Design • Sistema de Reservas • Optimización • Testing
+
 jaime.nebot.colom@gmail.com | 💼 [LinkedIn](https://www.linkedin.com/in/jaime-nebot-54132419b/)
 
 ---
