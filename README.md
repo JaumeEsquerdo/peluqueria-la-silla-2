@@ -174,8 +174,8 @@ jaime.nebot.colom@gmail.com | 💼 [LinkedIn](https://www.linkedin.com/in/jaime-
 
 - **Demo en vivo:** [la2silla.vercel.app](https://la-2-silla.vercel.app/)
 - **Código fuente:** [github.com/usuario/la2silla](https://github.com/JaumeEsquerdo/peluqueria-la-silla-2)
-- **Portfolio Jaime Nebot:** [tuportfolio.com](https://tuportfolio.com)
-- **Portfolio Jaume Esquerdo:** [tuportfolio.com](https://tuportfolio.com)
+- **Portfolio Jaime Nebot:** [Portfolio Jaime Nebot Frontend](https://web-jaime-nebot-git-main-jaimes-projects-7e668735.vercel.app/)
+- **Portfolio Jaume Esquerdo:** [Portfolio Jaume Esquerdo Frontend](https://portfolio-jaume-esquerdo.vercel.app/)
 
 ---
 
