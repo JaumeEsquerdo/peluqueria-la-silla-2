@@ -52,6 +52,7 @@ CSS HEADER GENERAL
 }
 
 .Header-navLink--Link {
+  cursor: pointer;
   display: inline-block;
 }
 

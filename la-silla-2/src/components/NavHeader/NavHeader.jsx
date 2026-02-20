@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export const NavHeader = ({ goToSection }) => {
   const [navOpen, setNavOpen] = useState(false);
@@ -54,9 +54,12 @@ export const NavHeader = ({ goToSection }) => {
           </button>
         </li>
         <li className="Header-li">
-          <Link className="Header-navLink Header-navLink--Link" to="/reservas">
+          <button
+            className="Header-navLink Header-navLink--Link"
+            onClick={() => (window.location.href = "/reservas")}
+          >
             RESERVAR
-          </Link>
+          </button>
         </li>
       </ul>
     </nav>
