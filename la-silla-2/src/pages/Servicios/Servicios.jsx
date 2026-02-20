@@ -1,4 +1,5 @@
 import "./Servicios.css";
+// import { Link } from "react-router-dom";
 
 export const Servicios = () => {
   return (
@@ -71,9 +72,13 @@ export const Servicios = () => {
             <span>45€</span>
           </div>
           {/* <!-- Botón de reservas --> */}
-          <a href="/reservas" className="Prices-button" title="Reserva tu cita">
+          <button
+            onClick={() => (window.location.href = "/reservas")}
+            className="Prices-button"
+            title="Reserva tu cita"
+          >
             RESERVA TU CITA
-          </a>
+          </button>
         </div>
       </div>
     </section>
