@@ -32,10 +32,10 @@ const Confirmada = () => {
         </ul>
       </header> */}
       <Header />
+      <div className="Sticky-container">
+        <h2 className="Reservas-h2">RESERVA ONLINE</h2>
+      </div>
       <section className="Reservas-content">
-        <div className="Sticky-container">
-          <h2 className="Reservas-h2">RESERVA ONLINE</h2>
-        </div>
         <div className="Reservas-contentConfirmada">
           <span className="ReservaConfirmada-line"></span>
           <span className="Circulo">
