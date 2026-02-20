@@ -52,30 +52,31 @@
 /* content */
 
 .Sticky-container {
-  position: relative;
+  position: fixed;
+  top: 40%;
+  left: 3%;
   width: auto;
+}
+
+.Reservas-h2 {
+  /* position: sticky;
+  top: 42%;
+  left: 0; */
+  transform: rotate(-90deg);
+  width: max-content;
+  font-size: clamp(48px, 5.4vw, 96px);
+  font-family: "Bebas Neue", sans-serif;
+  color: var(--main-color);
+  /* para que se vea "fuera" */
+  margin-left: -180px; /* lo empuja hacia fuera del section */
 }
 
 .Reservas-content {
   flex: 1;
   width: 70%;
   display: flex;
-
-  justify-content: flex-start;
-}
-
-.Reservas-h2 {
-  position: sticky;
-  top: 42%;
-  left: 0;
-  transform: rotate(-90deg);
-  width: max-content;
-  font-size: clamp(48px, 5.4vw, 96px);
-  font-family: "Bebas Neue", sans-serif;
-  color: var(--main-color);
-
-  /* para que se vea "fuera" */
-  margin-left: -180px; /* lo empuja hacia fuera del section */
+  justify-content: center;
+  align-items: center;
 }
 
 .Reservas-steps {
@@ -285,9 +286,28 @@
   .Reservas-contentCalendar {
     flex-direction: column;
   }
+  .Sticky-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: auto;
+    left: auto;
+    padding-bottom: 40px;
+  }
+
+  .Reservas-h2 {
+    transform: rotate(0deg);
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 900px) {
+  .Sticky-container {
+    width: 75%;
+  }
+
   .SubHeader {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -303,7 +323,6 @@
     position: relative;
     width: 100%;
     transform: rotate(0);
-    padding-bottom: 40px;
     margin: auto;
   }
 
@@ -313,9 +332,6 @@
   }
   .Reservas-content {
     width: 75%;
-  }
-  .Sticky-container {
-    width: 100%;
   }
   .Reservas-content {
     flex-direction: column;
@@ -345,5 +361,12 @@
   }
   .Servicio-precio {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .Reservas-content {
+    width: 100%;
+    padding: 0 10px;
   }
 }
