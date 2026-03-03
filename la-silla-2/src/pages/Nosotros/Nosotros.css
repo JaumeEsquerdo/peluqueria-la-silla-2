@@ -88,4 +88,7 @@ SOBRE NOSOTROS
   .Nosotros-text:last-child {
     order: 4;
   }
+  .Nosotros-title {
+    margin-bottom: 20px;
+  }
 }

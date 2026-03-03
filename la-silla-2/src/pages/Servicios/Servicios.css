@@ -14,7 +14,7 @@ PRECIOS Y SERVICIOS
   text-align: center;
   color: #24257f;
   letter-spacing: 2px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .Prices-grid {
@@ -87,6 +87,7 @@ PRECIOS RESPONSIVE
 @media (max-width: 900px) {
   .Prices-title {
     text-align: center;
+    margin-bottom: 20px;
   }
 
   .Prices-grid {
