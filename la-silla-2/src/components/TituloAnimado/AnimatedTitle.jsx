@@ -49,6 +49,8 @@ const AnimatedTitle = ({ title = "LA (2) SILLA" }) => {
       }
     };
 
+    handleScroll(); //inicial
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -62,6 +64,7 @@ const AnimatedTitle = ({ title = "LA (2) SILLA" }) => {
             src="/imgs/cabecera2.jpg"
             alt="Barbería La 2 Silla"
             title="Barbería La 2 Silla"
+            fetchPriority="high"
           />
           <div className="hero-overlay"></div>
         </div>
