@@ -32,7 +32,6 @@ export const Header = () => {
             alt="La [2] Silla"
             title="La [2] Silla"
             className="Header-logoImage"
-            loading="lazy"
           />
         </Link>
       </div>
